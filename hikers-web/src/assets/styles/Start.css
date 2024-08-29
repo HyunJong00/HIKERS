@@ -1,6 +1,144 @@
 /* src/assets/styles/Home.css */
-.start-container {
+.home-container {
     padding: 20px;
-    background-color: hsl(0, 79%, 38%);
+    background-image: url(../img/joinImage.jpg);
+    background-position: center;
+    background-size: cover;
+    height:100%;
+    display: flex;
+    justify-content: center; /* 가로축 중앙 정렬 */
+    align-items: center; /* 세로축 중앙 정렬 */
+    height: 100vh; /* 컨테이너가 화면 전체 높이를 사용 */
+    flex-direction: column; /* 내부 컴포넌트를 세로로 쌓음 */
+
   }
-  
+  .green-round-componet{
+    color:white;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    border:1px solid;
+    border-radius: 30px;
+    background-color: #97C793;
+    width: 300px;
+    margin-bottom: 20px;
+    height: 50px;
+    margin-top:100px;
+  }
+
+.wite-round-componet{
+    background-color: white;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    border:1px solid;
+    border-radius: 30px;
+    width:300px;
+    height: 50px;
+}
+.white-font{
+    color: white;
+    text-align: center;
+
+  }
+  .black-font{
+    color: black;
+    text-align: center;
+  }
+
+  .slide-container {
+    position: fixed;
+    bottom: -100%; /* 화면 아래 숨김 상태 */
+    left: 0;
+    width: 100%;
+    height:500px;
+    background-color: #97C793;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: bottom 0.5s ease; /* 슬라이드 애니메이션 */
+}
+
+.slide-container.visible {
+    bottom: 0; /* 컨테이너가 위로 슬라이드 */
+    background-color: white;
+    color:black;
+}
+
+button {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    background-color: #97C793;
+    border:0px #97C793;
+
+}
+hr{
+    border: 1px solid rgb(168, 168, 168);
+}
+.gray-font{
+    color: gray;
+}
+
+
+.rounded-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #d3d3d3; 
+  background-color: #f0f0f0; 
+  cursor: pointer;
+  position: relative;
+}
+
+.rounded-checkbox:checked {
+  background-color: lightgreen;
+  border-color: lightgreen;
+}
+
+.rounded-checkbox:checked::before {
+  content: '✔';
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+.agreement-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.agreement-container label {
+  margin-left: 10px;
+}
+
+.agreement-container#allCheckContainer {
+  display: flex;
+  align-items: center;
+}
+
+.agreement-container#allCheckContainer label {
+  margin-left: 5px;
+}
+
+.continue-button {
+  width: 100%;
+  background-color: lightgreen;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 20px; 
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.continue-button:hover {
+  background-color: green;
+}
