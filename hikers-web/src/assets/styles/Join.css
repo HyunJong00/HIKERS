@@ -79,3 +79,66 @@ hr{
 .gray-font{
     color: gray;
 }
+
+
+.rounded-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #d3d3d3; 
+  background-color: #f0f0f0; 
+  cursor: pointer;
+  position: relative;
+}
+
+.rounded-checkbox:checked {
+  background-color: lightgreen;
+  border-color: lightgreen;
+}
+
+.rounded-checkbox:checked::before {
+  content: '✔';
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+.agreement-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.agreement-container label {
+  margin-left: 10px;
+}
+
+.agreement-container#allCheckContainer {
+  display: flex;
+  align-items: center;
+}
+
+.agreement-container#allCheckContainer label {
+  margin-left: 5px;
+}
+
+.continue-button {
+  width: 100%;
+  background-color: lightgreen;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 20px; 
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.continue-button:hover {
+  background-color: green;
+}
