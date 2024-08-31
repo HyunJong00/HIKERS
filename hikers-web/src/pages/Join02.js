@@ -1,9 +1,9 @@
-// src/pages/Home.js
+// src/pages/Join02.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../assets/styles/Join01.css';
 
-function Start() {
+function Join02() {
     const [selectedInternationalNumber, setSelectedInternationalNumber] = useState('');
     const [verificationCode, setVerificationCode] = useState('');
     const navigate = useNavigate();
@@ -46,4 +46,4 @@ function Start() {
     );
 }
 
-export default Start;
+export default Join02;
