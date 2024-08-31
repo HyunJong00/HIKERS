@@ -15,8 +15,8 @@
   .green-round-componet{
     color:white;
     display: flex;
-    justify-content: center; /* 수평 중앙 정렬 */
-    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; 
+    align-items: center; 
     border:1px solid;
     border-radius: 30px;
     background-color: #97C793;
@@ -26,17 +26,17 @@
     margin-top:100px;
   }
 
-.wite-round-componet{
+  .white-round-componet{
     background-color: white;
     display: flex;
-    justify-content: center; /* 수평 중앙 정렬 */
-    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; 
+    align-items: center; 
     border:1px solid;
     border-radius: 30px;
     width:300px;
     height: 50px;
-}
-.white-font{
+  }
+  .white-font{
     color: white;
     text-align: center;
 
@@ -76,10 +76,14 @@ button {
 hr{
     border: 1px solid rgb(168, 168, 168);
 }
-.gray-font{
-    color: gray;
+
+.default-font {
+  color: black;
 }
 
+.gray-font {
+  color: gray;
+}
 
 .rounded-checkbox {
   appearance: none;
