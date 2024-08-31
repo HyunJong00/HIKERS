@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../assets/styles/Start.css';
 
-function Join() {
+function Start() {
+  /* useNavigate를 통해 페이지 이동(start -> join01)을 위한 변수 선언 */
+  const navigate = useNavigate();
+
   /* 필요한 state 모음 */
   const [isVisible, setIsVisible] = useState(false);
   const [allChecked, setAllChecked] = useState(false);
@@ -57,8 +61,7 @@ function Join() {
 
   const handleProceed = () => {
     if (termsChecked && privacyChecked && ageAbove12Checked) {
-      console.log('다음 화면으로 이동');
-      // 다음 화면으로 이동 로직 (아직 구현 안 됨)
+      navigate('/join01');
     } else {
       alert('모든 필수 항목을 체크해주세요.');
     }
@@ -141,4 +144,4 @@ function Join() {
   );
 }
 
-export default Join;
+export default Start;
