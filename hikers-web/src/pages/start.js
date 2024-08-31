@@ -129,7 +129,7 @@ function Start() {
               onChange={(e) => setAgeAbove12Checked(e.target.checked)}
               className="rounded-checkbox"
             />
-            <label htmlFor="marketing">만 12세 이상입니다.(필수)</label>
+            <label htmlFor="ageAbove12">만 12세 이상입니다(필수)</label>
           </div>
           <button className="continue-button" onClick={handleProceed}>계속하기</button>
         </div>

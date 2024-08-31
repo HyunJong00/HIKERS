@@ -6,6 +6,7 @@ import '../assets/styles/Join01.css';
 function Join01() {
     const [selectedInternationalNumber, setSelectedInternationalNumber] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
+    const [error, setError] = useState('');
     const navigateStart = useNavigate();
     const navigateJoin02 = useNavigate();
 
@@ -15,14 +16,26 @@ function Join01() {
 
     const phoneNumberChange = (event) => {
         setPhoneNumber(event.target.value);
+        // 입력 중에는 에러 메시지를 숨김
+        setError('');
     };
 
     const goBack = () => {
         navigateStart('/'); // '/' 페이지로 이동
     };
 
+    const validatePhoneNumber = (number) => {
+        const phoneRegex = /^[0-9]{10,11}$/; // 10자리 또는 11자리 숫자
+        return phoneRegex.test(number);
+    };
+
     const goJoin02 = () => {
-        navigateJoin02('/join02');
+        if (!validatePhoneNumber(phoneNumber)) {
+            setError('올바르지 않은 번호입니다. 번호를 다시 입력해주세요.');
+        } else {
+            setError('');
+            navigateJoin02('/join02');
+        }
     };
 
     return (
@@ -49,6 +62,7 @@ function Join01() {
                         value={phoneNumber}
                         onChange={phoneNumberChange}
                     />
+                    {error && <div className="error-message">{error}</div>}
                 </div>
             </div>
             <div className="continue">
