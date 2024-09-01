@@ -1,33 +1,86 @@
-/* src/assets/styles/Home.css */
+/* src/assets/styles/Join01.css */
 .start-container {
-  padding:20px;
-  margin-left:20px;
+  padding: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* 전체 화면 높이 사용 */
+  justify-content: space-between; /* 요소들 사이에 여백을 균등하게 배분 */
+}
 
-  }
-  .phone-number-container{
-    display: flex;
+.phone-number-container {
+  display: flex;
+  margin-bottom: 20px;
+  flex: 1; /* 수평 공간을 다 사용하도록 설정 */
+}
 
-  }
-  .phone-number{
-    margin-right:10px;
-    
-  }
-.continue{
-  color:white;
+.phone-number {
+  margin-right: 10px;
+  flex: 1; /* 입력 필드가 가능한 공간을 다 사용하도록 설정 */
+}
+
+.phone-number select {
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 2px solid #d3d3d3; /* 기본 회색 */
+  font-size: 16px;
+  padding: 5px;
+  width: 100%; /* 입력 필드가 부모 컨테이너를 꽉 채우도록 설정 */
+  box-sizing: border-box; /* padding을 포함하여 전체 너비 계산 */
+  transition: border-color 0.3s ease;
+}
+
+.phone-number input {
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 2px solid #d3d3d3; /* 기본 회색 */
+  font-size: 16px;
+  padding: 5px;
+  width: 100%; /* 입력 필드가 부모 컨테이너를 꽉 채우도록 설정 */
+  box-sizing: border-box; /* padding을 포함하여 전체 너비 계산 */
+  transition: border-color 0.3s ease;
+}
+
+.phone-number input:focus,
+.phone-number select:focus {
+  border-bottom: 2px solid #4caf50; /* 초록색 */
+}
+
+.continue {
+  color: white;
   display: flex;
   justify-content: center; /* 수평 중앙 정렬 */
   align-items: center; /* 수직 중앙 정렬 */
-  border:1px solid;
+  border: 1px solid;
   border-radius: 30px;
   background-color: #97C793;
   width: 300px;
-  margin-bottom: 20px;
   height: 50px;
-  margin-top:100px;
-  margin:auto;
-  margin-top:200px;
+  position: fixed; /* 화면 하단에 고정 */
+  bottom: 20px; /* 화면 하단에서 20px 떨어진 위치 */
+  left: 50%; /* 수평 중앙에 위치 */
+  transform: translateX(-50%); /* 중앙 정렬 */
+  cursor: pointer; /* 포인터 커서로 변경 */
+  transition: background-color 0.3s ease; /* 배경색 변화에 부드러운 애니메이션 추가 */
 }
-.left-aligned{
-  margin-right:auto;
-  margin-left:10px;
+
+.continue h2 {
+  margin: 0; /* 기본 margin 제거 */
+}
+
+.continue:hover {
+  background-color: #4caf50; /* 찐한 초록색 */
+}
+
+.left-aligned {
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
 }

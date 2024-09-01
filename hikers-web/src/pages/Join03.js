@@ -1,14 +1,14 @@
-// src/pages/Home.js
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// src/pages/Join03.js
+import React from 'react';
 import '../assets/styles/Join03.css';
 
-function Start() { 
+function Join03() {
     return (
         <div className="container">
-            <h1> 인증 완료 </h1>
+            <div className="check-icon">✔️</div> 
+            <div className="message">인증 완료</div> 
         </div>
     );
 }
 
-export default Start;
+export default Join03;
