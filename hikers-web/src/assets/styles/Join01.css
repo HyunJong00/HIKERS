@@ -4,8 +4,6 @@
   margin-left: 20px;
   display: flex;
   flex-direction: column;
-  height: 100vh; /* 전체 화면 높이 사용 */
-  justify-content: space-between; /* 요소들 사이에 여백을 균등하게 배분 */
 }
 
 .phone-number-container {
@@ -14,37 +12,35 @@
   flex: 1; /* 수평 공간을 다 사용하도록 설정 */
 }
 
-.phone-number {
-  margin-right: 10px;
-  flex: 1; /* 입력 필드가 가능한 공간을 다 사용하도록 설정 */
-}
-
-.phone-number select {
+.international-phone-number select {
   border: none;
   outline: none;
   background: transparent;
   border-bottom: 2px solid #d3d3d3; /* 기본 회색 */
-  font-size: 16px;
-  padding: 5px;
+  font-size: 20px;
   width: 100%; /* 입력 필드가 부모 컨테이너를 꽉 채우도록 설정 */
   box-sizing: border-box; /* padding을 포함하여 전체 너비 계산 */
   transition: border-color 0.3s ease;
-}
+  margin-left:10px;
+  
 
+
+}
 .phone-number input {
   border: none;
   outline: none;
   background: transparent;
   border-bottom: 2px solid #d3d3d3; /* 기본 회색 */
-  font-size: 16px;
-  padding: 5px;
-  width: 100%; /* 입력 필드가 부모 컨테이너를 꽉 채우도록 설정 */
+  font-size: 20px;
+  width: 200%; /* 입력 필드가 부모 컨테이너를 꽉 채우도록 설정 */
   box-sizing: border-box; /* padding을 포함하여 전체 너비 계산 */
   transition: border-color 0.3s ease;
+  margin-left:20px;
+
 }
 
 .phone-number input:focus,
-.phone-number select:focus {
+.international-phone-number select:focus {
   border-bottom: 2px solid #4caf50; /* 초록색 */
 }
 

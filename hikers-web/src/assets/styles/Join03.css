@@ -5,7 +5,7 @@
   justify-content: center; /* 수직 가운데 정렬 */
   align-items: center; /* 수평 가운데 정렬 */
   height: 100vh; /* 전체 화면 높이 */
-  background-image: url(C:\Users\Hoon\HIKERS\회원가입\HIKERS\hikers-web\src\assets\img\complete.jpg); /* 배경 이미지 설정 */
+  background-image: url(../img/complete.jpg); /* 배경 이미지 설정 */
   background-size: cover; /* 이미지가 컨테이너를 완전히 덮도록 설정 */
   background-position: center; /* 이미지가 컨테이너의 중앙에 위치하도록 설정 */
   background-repeat: no-repeat; /* 이미지가 반복되지 않도록 설정 */

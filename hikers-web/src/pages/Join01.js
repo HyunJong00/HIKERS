@@ -46,7 +46,7 @@ function Join01() {
                 <p>허위/중복 가입을 막고, 악성사용자를 제재하는 데 사용해요. 입력한 번호는 절대 공개되지 않아요.</p>
             </div>
             <div className="phone-number-container">
-                <div className="phone-number">
+                <div className="international-phone-number">
                     <select id="internationalNumber" name="internationalNumber" value={selectedInternationalNumber} onChange={internationalNumberChange}>
                         <option value="82">+82</option>
                         <option value="84">+84</option>

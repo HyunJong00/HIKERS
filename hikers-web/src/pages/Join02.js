@@ -1,7 +1,7 @@
 // src/pages/Join02.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../assets/styles/Join01.css';
+import '../assets/styles/Join02.css';
 
 function Join02() {
     const [verificationCode, setVerificationCode] = useState('');
