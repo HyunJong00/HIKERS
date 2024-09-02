@@ -1,0 +1,78 @@
+/* 선택박스 스타일 */
+.gender label {
+  display: flex;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  font-weight: bold;
+}
+
+.gender input:checked + label {
+  border-color: #8fc48f;
+}
+
+/* 커스텀 라디오버튼 */
+.gender input {
+  display: none;
+}
+
+.custom-radio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.gender input:checked + label .custom-radio {
+  border-color: #8fc48f;
+}
+
+.gender input:checked + label .custom-radio::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #8fc48f;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.label-text {
+  flex-grow: 1;
+}
+
+/* 버튼 스타일 */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.button-container button {
+  padding: 15px 20px;
+  border-radius: 100px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.button-skip {
+  background-color: #ccc;
+  color: white;
+}
+
+.button-continue {
+  background-color: #8fc48f;
+  color: white;
+  font-weight: bold;
+}

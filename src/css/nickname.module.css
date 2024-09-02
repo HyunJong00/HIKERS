@@ -1,0 +1,100 @@
+/* 닉네임 입력란 */
+.nickname {
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nickname::placeholder {
+  color: #ccc;
+}
+
+.nickname:focus {
+  outline: none;
+}
+
+/* X 버튼 */
+.delete-button {
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 50%;
+
+  /* 버튼 임시 위치 지정 */
+  display: flex;
+  position: relative;
+  bottom: 22px;
+  left: 330px;
+
+  border: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.delete-button::before,
+.delete-button::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background-color: white;
+}
+
+.delete-button::before {
+  transform: rotate(45deg);
+}
+
+.delete-button::after {
+  transform: rotate(-45deg);
+}
+
+.nickname:placeholder-shown + .delete-button {
+  opacity: 0;
+}
+
+/* 밑줄 */
+.input-line {
+  height: 2px;
+  margin-top: -10px;
+  background-color: #97c793;
+  transition: background-color 0.3s ease;
+}
+
+.nickname:placeholder-shown ~ .input-line {
+  background-color: #ccc;
+}
+
+.warning {
+  color: #ee434e;
+  font-size: 12px;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-text {
+  color: #6d6d6d;
+  font-size: 13px;
+}
+
+/* 계속하기 버튼 */
+.continue {
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 10px;
+  border: none;
+  height: 54px;
+  width: 100%;
+  padding-bottom: 5px;
+  transition: background-color 0.3s ease;
+}

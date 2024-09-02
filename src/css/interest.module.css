@@ -1,0 +1,24 @@
+.button-container {
+  flex-direction: row;
+  height: 100%;
+  padding-left: 10px;
+}
+
+.button-container button {
+  padding: 15px 40px;
+  margin: 50px 20px 0 20px;
+  border-radius: 100px;
+  border: none;
+  font-size: 16px;
+}
+
+.button-skip {
+  background-color: #ccc;
+  color: white;
+}
+
+.button-continue {
+  background-color: #8fc48f;
+  color: white;
+  font-weight: bold;
+}

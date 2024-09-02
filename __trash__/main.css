@@ -1,0 +1,68 @@
+body {
+  background-color: rgb(219, 212, 183);
+}
+
+.screen {
+  max-width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+  flex-direction: column;
+}
+
+.statusBar {
+  flex: 5;
+  width: 100%;
+  background: linear-gradient(to right, #c7fafd, #e7bcfc);
+}
+
+.header {
+  flex: 5;
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-top: 5px;
+}
+
+.mainScreen {
+  flex: 85;
+  width: 100%;
+}
+
+.contents {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.contents h3 {
+  font-weight: bold;
+}
+
+.contents p {
+  font-size: small;
+  color: gray;
+}
+
+.footer {
+  flex: 7;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.continue {
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  height: 70%;
+  width: 80%;
+  padding-bottom: 5px;
+}

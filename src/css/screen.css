@@ -1,0 +1,64 @@
+body {
+  background-color: rgb(219, 212, 183);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.screen {
+  max-width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+  flex-direction: column;
+}
+
+.statusBar {
+  flex: 5;
+  width: 100%;
+  background: linear-gradient(to right, #c7fafd, #e7bcfc);
+}
+
+.header {
+  flex: 7;
+  width: 100%;
+}
+
+.back {
+  height: 40px;
+  width: 40px;
+  margin-left: 5px;
+  font-size: 20px;
+  border: none;
+  background-color: #fff;
+}
+
+.mainScreen {
+  flex: 85;
+  width: 100%;
+}
+
+.contents {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.contents h3:first-of-type {
+  font-weight: bold;
+  margin: auto;
+  color: #222;
+}
+
+.contents p:first-of-type {
+  font-size: small;
+  color: gray;
+  margin-bottom: 50px;
+}
+
+.footer {
+  flex: 15;
+  width: 100%;
+}
