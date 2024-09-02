@@ -34,3 +34,12 @@ ex) feat: Add login api
 
 **Footer** <br>
 어떠한 이슈에 대한 commit 인지 issue number 를 포함합니다.그리고 close #1 처럼 close 를 통해 해당 이슈를 닫는 방법도 있습니다.
+
+**작성예시**<br>
+
+git commit -m "fix: Safari에서 모달을 띄웠을 때 스크롤 이슈 수정
+
+모바일 사파리에서 Carousel 모달을 띄웠을 때,
+모달 밖의 상하 스크롤이 움직이는 이슈 수정.
+
+resolves: #1137
