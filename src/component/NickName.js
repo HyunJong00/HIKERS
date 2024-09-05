@@ -7,9 +7,9 @@ function NickName() {
   const [isExist, setIsExist] = useState("none");
   const navigate = useNavigate();
 
-  const onBack = navigate("/login/interest");
-  const onChange = setNickname(e.target.value);
-  const onDelete = setNickname("");
+  const onBack = () => navigate("/login/interest");
+  const onChange = (e) => setNickname(e.target.value);
+  const onDelete = () => setNickname("");
   const onContinue = () => {
     if (nickname === "aa") {
       setIsExist(true);
@@ -31,8 +31,8 @@ function NickName() {
 
       <div className="mainScreen">
         <div className="contents">
-          <h3>멋진 별명을 만들어볼까요?</h3>
-          <p>프로필에 표시되는 이름이에요.</p>
+          <h3 className="title">멋진 별명을 만들어볼까요?</h3>
+          <p className="summary">프로필에 표시되는 이름이에요.</p>
 
           {/* 입력칸 */}
           <div className="inputContainer">

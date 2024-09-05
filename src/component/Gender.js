@@ -4,8 +4,8 @@ import styles from "../css/gender.module.css";
 function Gender() {
   const navigate = useNavigate();
 
-  const onSkip = navigate("/login/interest"); // need to change
-  const onContinue = navigate("/login/interest");
+  const onSkip = () => navigate("/login/interest"); // need to change
+  const onContinue = () => navigate("/login/interest");
 
   return (
     <div className="screen">
@@ -17,8 +17,8 @@ function Gender() {
 
       <div className="mainScreen">
         <div className="contents">
-          <h3>성별을 선택해 주세요</h3>
-          <p>
+          <h3 className="title">성별을 선택해 주세요</h3>
+          <p className="summary">
             입력한 성별은 등산일지에서 다른 등산러들과 실적을 비교하고 교류하는
             데 도움이 돼요.
           </p>
