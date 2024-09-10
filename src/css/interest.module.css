@@ -44,6 +44,32 @@
   border-radius: 4.8px;
 }
 
+.hashtag-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.hashtag-box {
+  display: flex;
+  padding: 7px;
+  justify-content: cneter;
+  align-items: center;
+  gap: 5px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(to right, #adf5ed, #fce7ff);
+  margin: 10px;
+
+  color: #486166;
+  text-align: center;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
 .button-container {
   flex-direction: row;
   height: 100%;

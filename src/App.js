@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Main from "./Main";
-import Gender from "./component/Gender";
-import Interest from "./component/Interest";
-import NickName from "./component/NickName";
-import Final from "./component/Final";
+import Gender from "./pages/Gender";
+import Interest from "./pages/Interest";
+import NickName from "./pages/NickName";
+import Final from "./pages/Final";
 
 const router = createBrowserRouter(
   [
