@@ -1,0 +1,8 @@
+/* 폰트 스타일정보 */
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('./assets/fonts/Paperlogy.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
