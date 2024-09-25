@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # HIKERS
 hikers 레파지토리입니다.
 
@@ -42,4 +43,3 @@ git commit -m "fix: Safari에서 모달을 띄웠을 때 스크롤 이슈 수정
 모바일 사파리에서 Carousel 모달을 띄웠을 때,
 모달 밖의 상하 스크롤이 움직이는 이슈 수정.
 
-resolves: #1137
