@@ -9,7 +9,7 @@ import BottomBar from '../components/common/BottomBar';
 
 const LJ010000S = () => {
     return (
-        <div style={{width: '100%', height: '100%', position: 'relative', backgroundImage: `url(${mountainImage})`}}>
+        <div style={{width: '360px', height: '800px',backgroundSize:'cover',backgroundImage: `url(${mountainImage})`}}>
             <StatusBar />
             <Title />
             <Subtitle />
