@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-import Home from "../../assets/Home.svg";
-import Discovery from "../../assets/Discovery.svg";
-import Navigation from "../../assets/Navigation.svg";
-import World from "../../assets/World.png";
-import Community from "../../assets/Community.svg";
+import Home from "../../assets/MenuBar/Home.svg";
+import Discovery from "../../assets/MenuBar/Discovery.svg";
+import Navigation from "../../assets/MenuBar/Navigation.svg";
+import World from "../../assets/MenuBar/World.png";
+import Community from "../../assets/MenuBar/Community.svg";
 
 function MenuBar() {
   const menus = ["홈", "탐색하기", "내비게이션", "오르락 월드", "커뮤니티"];
