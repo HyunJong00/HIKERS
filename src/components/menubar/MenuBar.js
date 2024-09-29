@@ -19,18 +19,12 @@ function MenuBar() {
   const onClick = () => {};
 
   return (
-    <Container style={{ display: "flex", width: "100%" }}>
+    <Container>
       {menus.map((menu) => (
-        <div
-          style={{
-            flex: 1,
-            textAlign: "center",
-          }}
-          onClick={onClick}
-        >
+        <Content onClick={onClick}>
           <img src={images[menu]} alt={menu} height="25px" />
           <Text>{menu}</Text>
-        </div>
+        </Content>
       ))}
     </Container>
   );
@@ -39,6 +33,13 @@ function MenuBar() {
 const Container = styled.div`
   padding: 10px 0 10px 0;
   border: 0.6px solid #959595;
+  display: flex;
+  width: 100%;
+`;
+
+const Content = styled.div`
+  flex: 1;
+  text-align: center;
 `;
 
 const Text = styled.div`
