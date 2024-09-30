@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import GlobalFonts from "./styles/GlobalFonts.js";
+import GlobalStyles from "./styles/GlobalStyles.js";
 import Home from "./pages/Home.js";
 
 const router = createBrowserRouter(
@@ -17,6 +18,7 @@ function App() {
     <>
       <RouterProvider router={router} />
       <GlobalFonts />
+      <GlobalStyles />
     </>
   );
 }
