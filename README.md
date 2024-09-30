@@ -2,6 +2,20 @@
 
 hikers 레파지토리입니다.
 
+## 웹페이지 접속 방법 
+1. node.js 공식 홈페이지 접속후 node.js 다운
+1. VSCode 접속후 다운받을 폴더로 이동
+2. 아래 명령어로 코드 다운
+```
+git clone https://github.com/HyunJong00/HIKERS.git
+```
+3. 아래 명령어로 동작
+```
+npm start
+```
+5. 희망 페이지로 이동(ex. http://localhost:3000/LJ010000S)
+
+   
 ## Commit message 규칙
 
 기본적으로 commit message 는 제목, 본문, 꼬리말로 구성합니다. <br>
@@ -38,3 +52,4 @@ git commit -m "fix: Safari에서 모달을 띄웠을 때 스크롤 이슈 수정
 모바일 사파리에서 Carousel 모달을 띄웠을 때, <br>
 모달 밖의 상하 스크롤이 움직이는 이슈 수정. <br><br>
 resolves: #1137
+
