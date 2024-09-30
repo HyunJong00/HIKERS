@@ -1,44 +1,104 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../styles.css';
 
 const SelectTime = () => {
+    const [isOpen, setIsOpen] = useState(false); // 드롭다운 열림/닫힘 상태
+    const [selectedTime, setSelectedTime] = useState('시간 선택'); // 선택된 시간 상태
+
+    const timeOptions = ['1시간', '2시간', '3시간', '4시간 이상'];
+
+    const toggleDropdown = () => {
+        setIsOpen(!isOpen); // 드롭다운 열기/닫기
+    };
+
+    const selectTime = (time) => {
+        setSelectedTime(time); // 선택된 시간으로 버튼 텍스트 및 문구 업데이트
+        setIsOpen(false); // 선택 후 드롭다운 닫기
+    };
+
     return (
-        <div style={{width: 349, height: 147.20, left: 6, top: 278, position: 'absolute'}}>
-            <div style={{width: 349, height: 44, left: 0, top: 0, position: 'absolute', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10, display: 'inline-flex'}}>
-                <div style={{width: 349, height: 44, paddingLeft: 16, paddingRight: 16, background: '#E7F9F8', borderRadius: 100, justifyContent: 'center', alignItems: 'center', display: 'flex'}}>
-                    <div style={{textAlign: 'center', color: '#222222', fontSize: 13, fontFamily: 'Amiko', fontWeight: '700', wordWrap: 'break-word'}}>“하산까지의 소요시간은                           정도면 적당할듯!?”</div>
-                </div>
+        <div style={{ width: 349, height: 147.2, left: 6, top: 278, position: 'absolute' }}>
+            {/* 시간 안내 텍스트 */}
+            <div style={{ 
+                width: '100%', 
+                padding: '0 16px', 
+                background: '#E7F9F8', 
+                borderRadius: 100, 
+                display: 'flex', 
+                justifyContent: 'center', 
+                alignItems: 'center' 
+            }}>
+                <p style={{ textAlign: 'center', color: '#222222', fontSize: 13, fontFamily: 'Amiko', fontWeight: '700' }}>
+                    “하산까지의 소요시간은 <span style={{ color: '#0CA328' }}>{selectedTime}</span> 정도면 적당할듯!?”
+                </p>
             </div>
-            <div style={{width: 109, height: 138.20, left: 142, top: 9, position: 'absolute', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 4.80, display: 'inline-flex'}}>
-                <div style={{width: 89, height: 27, paddingLeft: 9.60, paddingRight: 9.60, paddingTop: 6.40, paddingBottom: 6.40, background: 'white', borderRadius: 4.80, justifyContent: 'flex-start', alignItems: 'center', gap: 8, display: 'inline-flex'}}>
-                    <div style={{flex: '1 1 0', color: '#0F172A', fontSize: 14, fontFamily: 'Inter', fontWeight: '400', lineHeight: 24, wordWrap: 'break-word'}}>시간 선택</div>
-                    <div style={{width: 12.80, height: 12.80, position: 'relative'}}>
-                        <div style={{width: 6.40, height: 3.20, left: 3.20, top: 4.80, position: 'absolute', border: '1.07px #94A3B8 solid'}}></div>
+
+            {/* 시간 선택 박스 */}
+            <div style={{ 
+                width: 109, 
+                position: 'absolute', 
+                top: 9, 
+                left: '50%', 
+                transform: 'translateX(-50%)', 
+                display: 'flex', 
+                flexDirection: 'column', 
+                gap: 5 
+            }}>
+                {/* 시간 선택 버튼 */}
+                <button 
+                    onClick={toggleDropdown} // 클릭 시 드롭다운 열기/닫기
+                    style={{ 
+                        width: '100%', 
+                        padding: '4px 8px', // 패딩을 줄여 버튼 크기 축소
+                        background: 'white', 
+                        borderRadius: 5, 
+                        border: '1px solid #F1F5F9', 
+                        display: 'flex', 
+                        justifyContent: 'space-between', 
+                        alignItems: 'center', 
+                        cursor: 'pointer',
+                        fontSize: 12, // 글자 크기도 줄임
+                    }}>
+                    <span style={{ color: '#0F172A', fontSize: 12, fontFamily: 'Inter', fontWeight: '400' }}>{selectedTime}</span>
+                    <div style={{ width: 10.8, height: 10.8, position: 'relative', marginLeft: 5 }}>
+                        <div style={{ 
+                            width: 6.4, 
+                            height: 3.2, 
+                            border: '1px solid #94A3B8', 
+                            transform: isOpen ? 'rotate(-135deg)' : 'rotate(45deg)', 
+                            transition: 'transform 0.2s ease' 
+                        }} />
                     </div>
-                </div>
-                <div style={{width: 109, opacity: 0.30, boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.09)', borderRadius: 4.80, overflow: 'hidden', border: '0.80px #F1F5F9 solid', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
-                    <div style={{flex: '1 1 0', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex'}}>
-                        <div style={{alignSelf: 'stretch', height: 106.40, paddingBottom: 4, paddingLeft: 4, paddingRight: 4, background: 'white', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'flex'}}>
-                            <div style={{alignSelf: 'stretch', paddingTop: 4.80, paddingBottom: 4.80, paddingLeft: 25.60, paddingRight: 6.40, background: 'white', justifyContent: 'flex-start', alignItems: 'center', gap: 6.40, display: 'inline-flex'}}>
-                                <div style={{flex: '1 1 0', color: '#334155', fontSize: 14, fontFamily: 'Inter', fontWeight: '500', lineHeight: 20, wordWrap: 'break-word'}}>1시간</div>
+                </button>
+
+                {/* 시간 옵션 리스트 (드롭다운) */}
+                {isOpen && (
+                    <div style={{ 
+                        width: '100%', 
+                        boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.09)', 
+                        borderRadius: 5, 
+                        overflow: 'hidden', 
+                        border: '1px solid #F1F5F9', 
+                        background: 'white',
+                        marginTop: 5
+                    }}>
+                        {timeOptions.map((time, index) => (
+                            <div 
+                                key={index} 
+                                onClick={() => selectTime(time)} // 클릭 시 시간 선택
+                                style={{ 
+                                    padding: '5px 20px', 
+                                    display: 'flex', 
+                                    justifyContent: 'space-between', 
+                                    alignItems: 'center', 
+                                    borderBottom: index !== timeOptions.length - 1 ? '1px solid #F1F5F9' : 'none',
+                                    cursor: 'pointer'
+                                }}>
+                                <span style={{ color: '#334155', fontSize: 14, fontFamily: 'Inter', fontWeight: '500' }}>{time}</span>
                             </div>
-                            <div style={{alignSelf: 'stretch', paddingTop: 4.80, paddingBottom: 4.80, paddingLeft: 25.60, paddingRight: 6.40, background: 'white', justifyContent: 'flex-start', alignItems: 'center', gap: 6.40, display: 'inline-flex'}}>
-                                <div style={{flex: '1 1 0', color: '#334155', fontSize: 14, fontFamily: 'Inter', fontWeight: '500', lineHeight: 20, wordWrap: 'break-word'}}>2시간</div>
-                            </div>
-                            <div style={{alignSelf: 'stretch', paddingTop: 4.80, paddingBottom: 4.80, paddingLeft: 25.60, paddingRight: 6.40, background: 'white', justifyContent: 'flex-start', alignItems: 'center', gap: 6.40, display: 'inline-flex'}}>
-                                <div style={{flex: '1 1 0', color: '#334155', fontSize: 14, fontFamily: 'Inter', fontWeight: '500', lineHeight: 20, wordWrap: 'break-word'}}>3시간</div>
-                            </div>
-                            <div style={{alignSelf: 'stretch', paddingLeft: 6.40, paddingRight: 6.40, paddingTop: 4.80, paddingBottom: 4.80, background: '#F1F5F9', borderRadius: 4.80, justifyContent: 'flex-start', alignItems: 'center', gap: 6.40, display: 'inline-flex'}}>
-                                <div style={{width: 12.80, height: 12.80, position: 'relative'}}>
-                                    <div style={{width: 8.53, height: 5.87, left: 2.13, top: 3.20, position: 'absolute', border: '1.60px #334155 solid'}}></div>
-                                </div>
-                                <div style={{flex: '1 1 0', color: '#334155', fontSize: 14, fontFamily: 'Inter', fontWeight: '500', lineHeight: 20, wordWrap: 'break-word'}}>4시간 이상</div>
-                            </div>
-                        </div>
-                        <div style={{alignSelf: 'stretch', height: 0, border: '0.80px #F1F5F9 solid'}}></div>
-                        <div style={{alignSelf: 'stretch', height: 0, border: '0.80px #F1F5F9 solid'}}></div>
+                        ))}
                     </div>
-                </div>
+                )}
             </div>
         </div>
     );

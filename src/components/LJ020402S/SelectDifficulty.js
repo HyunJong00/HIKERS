@@ -1,48 +1,115 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../styles.css';
 
 const SelectDifficulty = () => {
+    const [isOpen, setIsOpen] = useState(false); // 드롭다운 열림/닫힘 상태
+    const [selectedDifficulty, setSelectedDifficulty] = useState('난이도 선택'); // 선택된 난이도 상태, 기본값은 "난이도 선택"
+    const difficultyOptions = [
+        '아주 평탄한',
+        '적당히 평탄한',
+        '보통인',
+        '적당히 경사진',
+        '가파르게 경사진',
+    ];
+
+    const toggleDropdown = () => {
+        setIsOpen(!isOpen); // 드롭다운 열기/닫기
+    };
+
+    const selectDifficulty = (difficulty) => {
+        setSelectedDifficulty(difficulty); // 선택된 난이도로 버튼 텍스트 변경
+        setIsOpen(false); // 선택 후 드롭다운 닫기
+    };
+
     return (
-        <div style={{width: 349.80, height: 172.66, left: 4, top: 217, position: 'absolute'}}>
-            <div style={{width: 349, height: 46, left: 0.80, top: 0, position: 'absolute', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 10, display: 'inline-flex'}}>
-                <div style={{width: 346, height: 44, paddingLeft: 16, paddingRight: 16, background: '#E7F9F8', borderRadius: 100, justifyContent: 'center', alignItems: 'center', display: 'flex'}}>
-                    <div style={{textAlign: 'center'}}><span style="color: '#222222', fontSize: 13, fontFamily: 'Amiko', fontWeight: '700', wordWrap: 'break-word'">“내 실력이면 등산로가 </span><span style="color: '#0CA328', fontSize: 13, fontFamily: 'Amiko', fontWeight: '700', wordWrap: 'break-word'">적당히 경사진</span><span style="color: '#222222', fontSize: 13, fontFamily: 'Amiko', fontWeight: '700', wordWrap: 'break-word'"> 정도면 좋을 것 같아.”</span></div>
-                </div>
-            </div>
-            <div style={{width: 116, height: 163.66, left: 138, top: 9, position: 'absolute', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 4.80, display: 'inline-flex'}}>
-                <div style={{alignSelf: 'stretch', height: 26.86, paddingLeft: 9.60, paddingRight: 9.60, paddingTop: 6.40, paddingBottom: 6.40, background: 'white', borderRadius: 4.80, justifyContent: 'flex-start', alignItems: 'center', gap: 8, display: 'inline-flex'}}>
-                    <div style={{flex: '1 1 0', color: '#0F172A', fontSize: 14, fontFamily: 'Inter', fontWeight: '400', lineHeight: 24, wordWrap: 'break-word'}}>난이도 선택</div>
-                    <div style={{width: 12.80, height: 12.80, position: 'relative'}}>
-                        <div style={{width: 6.40, height: 3.20, left: 3.20, top: 4.80, position: 'absolute', border: '1.07px #94A3B8 solid'}}></div>
+        <div style={{ width: 349, position: 'absolute', left: 4, top: 217 }}>
+            {/* 안내 문구 */}
+            <div style={{ 
+                width: '100%', 
+                padding: '0 16px', 
+                background: '#E7F9F8', 
+                borderRadius: 100, 
+                display: 'flex', 
+                justifyContent: 'center', 
+                alignItems: 'center', 
+                flexDirection: 'row',
+                gap: '10px'
+            }}>
+                <p style={{ textAlign: 'center', color: '#222222', fontSize: 13, fontFamily: 'Amiko', fontWeight: '700', margin: 0 }}>
+                    “내 실력이면 등산로가
+                </p>
+                
+                {/* 난이도 선택 버튼 */}
+                <button 
+                    onClick={toggleDropdown} // 클릭 시 드롭다운 열기/닫기
+                    style={{ 
+                        padding: '4px 8px', // 패딩을 줄여 버튼 크기 감소
+                        background: 'white', 
+                        borderRadius: 5, 
+                        border: '1px solid #F1F5F9', 
+                        display: 'flex', 
+                        justifyContent: 'center', 
+                        alignItems: 'center', 
+                        cursor: 'pointer', 
+                        fontSize: 12, // 글씨 크기 축소
+                        fontFamily: 'Inter', 
+                        fontWeight: '500',
+                        color: '#0F172A'
+                    }}>
+                    {selectedDifficulty} {/* 선택된 난이도로 버튼 텍스트 변경 */}
+                    <div style={{ width: 10.8, height: 10.8, marginLeft: 5 }}>
+                        <div style={{ 
+                            width: 6.4, 
+                            height: 3.2, 
+                            border: '1px solid #94A3B8', 
+                            transform: isOpen ? 'rotate(-135deg)' : 'rotate(45deg)', // 상태에 따라 화살표 방향 변경
+                            transition: 'transform 0.2s ease' 
+                        }} />
                     </div>
-                </div>
-                <div style={{width: 136, boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.09)', borderRadius: 4.80, overflow: 'hidden', border: '0.80px #F1F5F9 solid', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'inline-flex'}}>
-                    <div style={{flex: '1 1 0', opacity: 0.30, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', display: 'inline-flex'}}>
-                        <div style={{alignSelf: 'stretch', height: 132, paddingBottom: 4, paddingLeft: 4, paddingRight: 4, background: 'white', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', display: 'flex'}}>
-                            <div style={{alignSelf: 'stretch', paddingTop: 4.80, paddingBottom: 4.80, paddingLeft: 25.60, paddingRight: 6.40, background: 'white', justifyContent: 'flex-start', alignItems: 'center', gap: 6.40, display: 'inline-flex'}}>
-                                <div style={{flex: '1 1 0', color: '#334155', fontSize: 14, fontFamily: 'Inter', fontWeight: '500', lineHeight: 20, wordWrap: 'break-word'}}>아주 평탄하면</div>
-                            </div>
-                            <div style={{alignSelf: 'stretch', paddingTop: 4.80, paddingBottom: 4.80, paddingLeft: 25.60, paddingRight: 6.40, background: 'white', justifyContent: 'flex-start', alignItems: 'center', gap: 6.40, display: 'inline-flex'}}>
-                                <div style={{flex: '1 1 0', color: '#334155', fontSize: 14, fontFamily: 'Inter', fontWeight: '500', lineHeight: 20, wordWrap: 'break-word'}}>적당히 평탄하면</div>
-                            </div>
-                            <div style={{alignSelf: 'stretch', paddingTop: 4.80, paddingBottom: 4.80, paddingLeft: 25.60, paddingRight: 6.40, background: 'white', justifyContent: 'flex-start', alignItems: 'center', gap: 6.40, display: 'inline-flex'}}>
-                                <div style={{flex: '1 1 0', color: '#334155', fontSize: 14, fontFamily: 'Inter', fontWeight: '500', lineHeight: 20, wordWrap: 'break-word'}}>보통이면</div>
-                            </div>
-                            <div style={{alignSelf: 'stretch', paddingLeft: 6.40, paddingRight: 6.40, paddingTop: 4.80, paddingBottom: 4.80, background: '#F1F5F9', borderRadius: 4.80, justifyContent: 'flex-start', alignItems: 'center', gap: 6.40, display: 'inline-flex'}}>
-                                <div style={{width: 12.80, height: 12.80, position: 'relative'}}>
-                                    <div style={{width: 8.53, height: 5.87, left: 2.13, top: 3.20, position: 'absolute', border: '1.60px #334155 solid'}}></div>
-                                </div>
-                                <div style={{flex: '1 1 0', color: '#334155', fontSize: 14, fontFamily: 'Inter', fontWeight: '500', lineHeight: 20, wordWrap: 'break-word'}}>적당히 경사지면</div>
-                            </div>
-                            <div style={{alignSelf: 'stretch', paddingTop: 4.80, paddingBottom: 4.80, paddingLeft: 25.60, paddingRight: 6.40, background: 'white', justifyContent: 'flex-start', alignItems: 'center', gap: 6.40, display: 'inline-flex'}}>
-                                <div style={{flex: '1 1 0', color: '#334155', fontSize: 14, fontFamily: 'Inter', fontWeight: '500', lineHeight: 20, wordWrap: 'break-word'}}>가파르게 경사지면</div>
-                            </div>
+                </button>
+
+                <p style={{ textAlign: 'center', color: '#222222', fontSize: 13, fontFamily: 'Amiko', fontWeight: '700', margin: 0 }}>
+                    정도면 좋을 것 같아.”
+                </p>
+            </div>
+
+            {/* 난이도 선택 옵션 (isOpen이 true일 때만 표시) */}
+            {isOpen && (
+                <div style={{ 
+                    width: 136, 
+                    marginTop: 10, 
+                    boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.09)', 
+                    borderRadius: 5, 
+                    border: '1px solid #F1F5F9', 
+                    background: 'white', 
+                    margin: '0 auto'
+                }}>
+                    {difficultyOptions.map((difficulty, index) => (
+                        <div 
+                            key={index} 
+                            onClick={() => selectDifficulty(difficulty)} // 클릭 시 난이도 선택
+                            style={{ 
+                                padding: '5px 20px', 
+                                display: 'flex', 
+                                justifyContent: 'space-between', 
+                                alignItems: 'center', 
+                                borderBottom: index !== difficultyOptions.length - 1 ? '1px solid #F1F5F9' : 'none',
+                                background: difficulty === selectedDifficulty ? '#F1F5F9' : 'white',
+                                cursor: 'pointer'
+                            }}>
+                            <span style={{ color: '#334155', fontSize: 14, fontFamily: 'Inter', fontWeight: '500' }}>{difficulty}</span>
+                            {difficulty === selectedDifficulty && (
+                                <div style={{ 
+                                    width: 12.8, 
+                                    height: 12.8, 
+                                    border: '1.6px solid #334155', 
+                                    transform: 'rotate(45deg)' 
+                                }} />
+                            )}
                         </div>
-                        <div style={{alignSelf: 'stretch', height: 0, border: '0.80px #F1F5F9 solid'}}></div>
-                        <div style={{alignSelf: 'stretch', height: 0, border: '0.80px #F1F5F9 solid'}}></div>
-                    </div>
+                    ))}
                 </div>
-            </div>
+            )}
         </div>
     );
 };

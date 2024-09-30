@@ -1,10 +1,3 @@
-html, body, #root {
-  margin: 0;
-  padding: 0;
-  height: 94%; 
-  width: 58%;
-}
-
 .App {
   text-align: center;
 }

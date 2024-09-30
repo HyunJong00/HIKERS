@@ -1,5 +1,4 @@
 import React from "react";
-import StatusBar from "../components/common/StatusBar";
 import BackButton from "../components/common/BackButton";
 import Title from "../components/LJ020402S/Title";
 import Subtitle from "../components/LJ020402S/Subtitle";
@@ -12,28 +11,25 @@ import Hashtag_1 from "../components/LJ020402S/Hashtag_1";
 import Hashtag_2 from "../components/LJ020402S/Hashtag_2";
 import Hashtag_3 from "../components/LJ020402S/Hashtag_3";
 import BottomText from "../components/LJ020402S/BottomText";
-import ContinueButton from "../components/LJ020402S/ContinueButton";
-import BottomBar from "../components/common/BottomBar";
+import ContinueButton from "../components/common/ContinueButton";
 
 const LJ020402S = () => {
     return (
-        <div style={{width: '100%', height: '100%', position: 'relative', background: 'white'}}>
-            <StatusBar />
+        <div style={{width: '360px', height: '800px', position: 'relative', background: 'white'}}>
             <BackButton />
             <Title />
             <Subtitle />
-            <Hashtag_1 />
-            <Hashtag_2 />
-            <Hashtag_3 />
-            <BottomText />
-            <ContinueButton />
-            <BottomBar />
-            {/*
             <SelectDifficulty />
             <SelectTime />
             <SelectStone />
             <SelectHeight />
             <SelectAccessibility />
+            <Hashtag_1 />
+            <Hashtag_2 />
+            <Hashtag_3 />
+            <BottomText />
+            <ContinueButton />
+            {/*
             */}
         </div>
     );
