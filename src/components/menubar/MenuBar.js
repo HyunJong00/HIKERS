@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
 import Home from "../../assets/menubar/Home.svg";
-import Discovery from "../../assets/menubar/Discovery.svg";
 import Navigation from "../../assets/menubar/Navigation.svg";
+import League from "../../assets/menubar/League.png";
 import World from "../../assets/menubar/World.png";
 import Community from "../../assets/menubar/Community.svg";
 
 function MenuBar() {
-  const menus = ["홈", "탐색하기", "내비게이션", "오르락 월드", "커뮤니티"];
+  const menus = ["홈", "내비게이션", "등반의 장", "오르락 월드", "커뮤니티"];
   const images = {
     홈: Home,
-    탐색하기: Discovery,
     내비게이션: Navigation,
+    "등반의 장": League,
     "오르락 월드": World,
     커뮤니티: Community,
   };
@@ -43,15 +43,11 @@ const Content = styled.div`
 `;
 
 const Text = styled.div`
-  color: var(--normal, #19191b);
-  text-align: center;
-  font-family: Paperslogy;
-  font-size: 13.2px;
+  color: #000;
+  font-family: "Paperlogy-4";
+  font-size: 11.49px;
   font-style: normal;
-  sfont-weight: 400;
-  line-height: 17.6px; /* 133.333% */
-  letter-spacing: -1.5px;
-  white-space: nowarp;
+  line-height: 15.32px; /* 133.333% */
 `;
 
 export default MenuBar;
