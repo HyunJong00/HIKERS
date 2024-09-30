@@ -17,7 +17,7 @@ function MainTab() {
         <span
           onClick={() => setCur(index)}
           dangerouslySetInnerHTML={{ __html: txt }}
-          style={{ color: cur == index ? "#000" : "#3C6270" }}
+          style={{ color: cur === index ? "#000" : "#3C6270" }}
         />
       ))}
     </Container>
