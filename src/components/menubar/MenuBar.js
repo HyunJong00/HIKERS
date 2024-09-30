@@ -16,6 +16,7 @@ function MenuBar() {
     커뮤니티: Community,
   };
 
+  // Content를 누르면 그에 맞는 페이지로 전환
   const onClick = () => {};
 
   return (
