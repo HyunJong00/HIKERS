@@ -1,38 +1,90 @@
-import './App.css'; 
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import SP010000S from './pages/SP010000S';
-import LJ010000S from './pages/LJ010000S';
-import LJ020100S from './pages/LJ020100S';
-import LJ020200S from './pages/LJ020200S';
-import LJ020300S from './pages/LJ020300S';
-import 가입_인증완료_230216 from './pages/가입_인증완료_230216';
-import LJ020401S from './pages/LJ020401S';
-import LJ020401S_1 from './pages/LJ020401S_1';
-import LJ020402S from './pages/LJ020402S';
-import LJ020403S from './pages/LJ020403S';
-import LJ020600S from './pages/LJ020600S';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { styled } from "styled-components";
+
+import GlobalFonts from "./styles/GlobalFonts.js";
+import GlobalStyles from "./styles/GlobalStyles.js";
+import J220S from "./pages/J220S.js";
+import J230S from "./pages/J230S.js";
+import J242S from "./pages/J242S.js";
+import J241S from "./pages/J241S.js"; 
+import J243S from "./pages/J243S.js";
+import J244S from "./pages/J244S.js";
+import J260S from "./pages/J260S.js";
+
+import J310S from "./pages/J310S.js";
+import J320S from "./pages/J320S.js";
+import J330S from "./pages/J330S.js";
+
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <J220S />,
+    },
+    {
+      path: "/J220S",
+      element: <J220S />,
+    },
+    {
+      path: "/J230S", 
+      element: <J230S />,
+    },
+    {
+      path: "/J242S", 
+      element: <J242S />, 
+    },
+    {
+      path: "/J241S", 
+      element: <J241S />, 
+    },
+    {
+      path: "/J243S",
+      element: <J243S />,
+    },
+    {
+      path: "/J244S",
+      element: <J244S />,
+    },
+    {
+      path: "/J260S",
+      element: <J260S />,
+    },
+
+    {
+      path: "/J310S",
+      element: <J310S />,
+    },
+    {
+      path: "/J320S",
+      element: <J320S />,
+    },
+    {
+      path: "/J330S",
+      element: <J330S />
+    },
+  ],
+  { basename: process.env.PUBLIC_URL } 
+);
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/SP010000S" element={<SP010000S />} />
-        <Route path="/LJ010000S" element={<LJ010000S />} />
-        <Route path="/LJ020100S" element={<LJ020100S />} />
-        <Route path="/LJ020200S" element={<LJ020200S />} />
-        <Route path="/LJ020300S" element={<LJ020300S />} />
-        <Route path="/가입_인증완료_230216" element={<가입_인증완료_230216 />} />
-        <Route path="/LJ020401S" element={<LJ020401S />} />
-        <Route path="/LJ020401S_1" element={<LJ020401S_1 />} />
-        <Route path="/LJ020402S" element={<LJ020402S />} />
-        <Route path="/LJ020403S" element={<LJ020403S />} />
-        <Route path="/LJ020600S" element={<LJ020600S />} />
-      </Routes>
-    </Router>
+    <MainScreen>
+      <RouterProvider router={router} />
+      <GlobalFonts />
+      <GlobalStyles />
+    </MainScreen>
   );
 }
 
+const MainScreen = styled.div`
+  width: 360px;
+  height: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  align-items: center;
+`;
 
 export default App;
-
