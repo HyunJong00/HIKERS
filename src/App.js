@@ -3,6 +3,8 @@ import { styled } from "styled-components";
 
 import GlobalFonts from "./styles/GlobalFonts.js";
 import GlobalStyles from "./styles/GlobalStyles.js";
+import J100S from "./pages/J100S.jsx";
+import J210S from "./pages/J210S.jsx";
 import J220S from "./pages/J220S.js";
 import J230S from "./pages/J230S.js";
 import J242S from "./pages/J242S.js";
@@ -14,12 +16,24 @@ import J260S from "./pages/J260S.js";
 import J310S from "./pages/J310S.js";
 import J320S from "./pages/J320S.js";
 import J330S from "./pages/J330S.js";
+import S100S from "./pages/S100S.jsx";
 
 const router = createBrowserRouter(
   [
+
+    {path: "/",
+      element: <S100S />},
     {
-      path: "/",
-      element: <J220S />,
+      path: "/S100S",
+      element: <S100S />,
+    },
+    {
+      path: "/J100S",
+      element: <J100S />,
+    },
+    {
+      path: "/J210S",
+      element: <J210S />,
     },
     {
       path: "/J220S",
