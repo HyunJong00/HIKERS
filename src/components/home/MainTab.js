@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import search from "../../assets/home/Search.svg";
 
-function MainTab() {
+export default function MainTab() {
   const [cur, setCur] = useState(1);
   const options = [
     `지도 뷰 <img src=${search} alt='s' />`,
@@ -55,5 +55,3 @@ const Container = styled.div`
     flex-shrink: 0;
   }
 `;
-
-export default MainTab;

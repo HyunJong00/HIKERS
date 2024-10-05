@@ -6,7 +6,7 @@ import League from "../../assets/menubar/League.png";
 import World from "../../assets/menubar/World.png";
 import Community from "../../assets/menubar/Community.svg";
 
-function MenuBar() {
+export default function MenuBar() {
   const menus = ["홈", "내비게이션", "등반의 장", "오르락 월드", "커뮤니티"];
   const images = {
     홈: Home,
@@ -33,7 +33,8 @@ function MenuBar() {
 
 const Container = styled.div`
   padding: 10px 0 10px 0;
-  border: 0.6px solid #959595;
+  border-top: 1px solid #dadada;
+  background-color: #fff;
   display: flex;
   width: 100%;
 `;
@@ -50,5 +51,3 @@ const Text = styled.div`
   font-style: normal;
   line-height: 15.32px; /* 133.333% */
 `;
-
-export default MenuBar;
