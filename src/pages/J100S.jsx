@@ -9,7 +9,10 @@ function J100S(){
     const navigate = useNavigate();
 
     const handleStartNewClick = () => {
-        navigate('/J210S'); // Replace '/next-page' with the actual path of the next page
+        navigate('/J210S'); 
+    };
+    const handleLoginClick = () => {
+        navigate('/J310S'); 
     };
     return(
         <Screen>
@@ -26,7 +29,7 @@ function J100S(){
                     <img src={naver} alt="naver" />
                 </socialLogin>
             </QuikStart>
-            <Login>
+            <Login onClick={handleLoginClick}>
                 이미 계정이 있나요?
             </Login>
         </Screen>
@@ -114,4 +117,5 @@ const Login = styled.span`
     font-size: 13px;
     font-family: Paperlogy-4;
     margin-bottom: 20px;
+    cursor: pointer;
 `;
