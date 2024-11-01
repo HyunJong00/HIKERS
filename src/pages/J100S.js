@@ -69,7 +69,7 @@ const Logo = styled.div`
 
 const Title = styled.h2`
     font-size: 20px;
-    font-family: 'Paperlogy-6';
+    font-family: 'Pretendard-6';
     color: #333;
     text-align: center;
 `;
@@ -88,7 +88,7 @@ const StartButton = styled.button`
     background-color: #5AC563;
     color: white;
     font-size: 16px;
-    font-family: 'Paperlogy-6';
+    font-family: 'Pretendard-6';
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -101,7 +101,7 @@ const SNSDescription = styled.p`
     color: #666;
     margin-top: 16px;
     margin-bottom: 16px;
-    font-family: 'Paperlogy-4';
+    font-family: 'Pretendard-4';
     text-align: center;
 `;
 
@@ -135,7 +135,7 @@ const ExistingAccountButton = styled.button`
     background-color: #f1f1f5;
     color: #666;
     font-size: 14px;
-    font-family: 'Paperlogy-4';
+    font-family: 'Pretendard-4';
     border: none;
     border-radius: 10px;
     cursor: pointer;

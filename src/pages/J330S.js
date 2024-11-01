@@ -47,7 +47,7 @@ const Title = styled.div`
     text-align: center;
     color: #222222;
     font-size: 23px;
-    font-family: Paperlogy-7;
+    font-family: Pretendard-7;
     margin-top: 30px;
 `;
 
@@ -56,7 +56,7 @@ const Subtitle = styled.div`
     text-align: center;
     color: #222222;
     font-size: 15px;
-    font-family: Paperlogy-6;
+    font-family: Pretendard-6;
     margin-top: 40px;
 `;
 

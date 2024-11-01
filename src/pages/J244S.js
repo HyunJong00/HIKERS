@@ -116,7 +116,7 @@ const Title = styled.h3`
     width: 100%; 
     height: 27px; 
     font-size: 23px;
-    font-family: Paperlogy-7;
+    font-family: Pretendard-7;
     text-align: left;  
     margin-top: 20px; 
 `;
@@ -125,7 +125,7 @@ const SubTitle = styled.p`
     width: 100%; 
     height: 20px; 
     font-size: 15px;
-    font-family: Paperlogy-3;
+    font-family: Pretendard-3;
     text-align: left;  
     margin-top: 1px; 
 `;
@@ -145,11 +145,11 @@ const InputContainer = styled.div`
 const NicknameInput = styled.input`
     border: none;
     font-size: 19px;
-    font-family: Paperlogy-3;
+    font-family: Pretendard-3;
     outline: none;
     
     ::placeholder {
-        font-family: Paperlogy-2; 
+        font-family: Pretendard-2; 
         color: #ccc;
     }
 `;
@@ -169,7 +169,7 @@ const DeleteButton = styled.button`
 const Warning = styled.p`
     color: #ee434e;
     font-size: 12px;
-    font-family: Paperlogy-4;
+    font-family: Pretendard-4;
     text-align: left; 
     visibility: ${(props) => (props.isExist ? "visible" : "hidden")};
     margin-top: 10px;
@@ -185,7 +185,7 @@ const Footer = styled.div`
 
 const FooterText = styled.p`
     font-size: 13px;
-    font-family: Paperlogy-4;
+    font-family: Pretendard-4;
     margin-bottom: 11px;
     text-align: center;
 `;
@@ -194,7 +194,7 @@ const ContinueButton = styled.button`
     border-radius: 25px;
     color: white;
     font-size: 17px;
-    font-family: Paperlogy-6;
+    font-family: Pretendard-6;
     border: none;
     height: 54px;
     width: 320px;

@@ -109,7 +109,7 @@ const Title = styled.h3`
     width: 100%;
     height: 27px;
     font-size: 23px;
-    font-family: Paperlogy-7;
+    font-family: Pretendard-7;
     text-align: left;
     margin-top: 20px;
 `;
@@ -118,7 +118,7 @@ const SubTitle = styled.p`
     width: auto;
     height: 20px;
     font-size: 15px;
-    font-family: Paperlogy-3;
+    font-family: Pretendard-3;
     text-align: left;
     margin-top: 0px;
     box-sizing: border-box;
@@ -128,7 +128,7 @@ const AgeDisplay = styled.div`
     width: 130px;
     height: 56px;
     font-size: 20px;
-    font-family: Paperlogy-5;
+    font-family: Pretendard-5;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -190,7 +190,7 @@ const SliderTicks = styled.div`
 
     span {
         font-size: 12px;
-        font-family: Paperlogy-3;
+        font-family: Pretendard-3;
         color: black;
     }
 `;
@@ -206,7 +206,7 @@ const ContinueButton = styled.button`
     border-radius: 25px;
     color: white;
     font-size: 17px;
-    font-family: Paperlogy-6;
+    font-family: Pretendard-6;
     border: none;
     height: 54px;
     width: 320px;

@@ -163,7 +163,7 @@ const Title = styled.h3`
     width: 100%;
     height: 27px;
     font-size: 23px;
-    font-family: Paperlogy-7;
+    font-family: Pretendard-7;
     text-align: left;
     margin-top: 20px;
 `;
@@ -172,7 +172,7 @@ const SubTitle = styled.p`
     width: auto;
     height: 20px;
     font-size: 15px;
-    font-family: Paperlogy-3;
+    font-family: Pretendard-3;
     text-align: left;
     margin-top: 0px;
     box-sizing: border-box;
@@ -189,7 +189,7 @@ const SelectBox = styled.div`
     border-radius: 100px;
     padding: 5px 15px;  /* 높이를 줄이기 위해 padding 조정 */
     font-size: 13px;
-    font-family: Paperlogy-7;
+    font-family: Pretendard-7;
     text-align: center;
     margin-bottom: 20px;
     display: flex;
@@ -205,7 +205,7 @@ const CustomSelect = styled.select`
     background: white url(${downIcon}) no-repeat right 10px center;  /* 배경 흰색, 아이콘을 우측에 배치 */
     background-size: 15px;  /* 아이콘 크기 조절 */
     padding: 5px 30px 5px 10px;  /* 위아래 패딩을 줄여서 높이 감소 */
-    font-family: Paperlogy-4;
+    font-family: Pretendard-4;
     font-size: 13px;
     border-radius: 4px;
     height: 25px;  /* 높이를 명확하게 설정 */
@@ -227,7 +227,7 @@ const HashtagBox = styled.div`
     padding: 5px 10px;
     margin: 5px;
     font-size: 9.9px;
-    font-family: Paperlogy-7;
+    font-family: Pretendard-7;
 `;
 
 /////Footer부분(건너뛰기, 계속하기 버튼)/////
@@ -255,7 +255,7 @@ const SkipButton = styled.button`
     border-radius: 50px;
     border: none;
     font-size: 17px;
-    font-family: Paperlogy-7;
+    font-family: Pretendard-7;
 `;
 
 const ContinueButton = styled.button`
@@ -265,7 +265,7 @@ const ContinueButton = styled.button`
     border-radius: 50px;
     border: none;
     font-size: 17px;
-    font-family: Paperlogy-7;
+    font-family: Pretendard-7;
     transition: background-color 0.3s ease;
 `;
 

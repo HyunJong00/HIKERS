@@ -128,7 +128,7 @@ const MainContent = styled.div`
 const Title = styled.h3`
     width: 100%; 
     font-size: 23px;
-    font-family: Paperlogy-7;
+    font-family: Pretendard-7;
     text-align: left;  
     margin-top: 3px;
 `;
@@ -136,7 +136,7 @@ const Title = styled.h3`
 const SubTitle = styled.p`
     width: 100%; 
     font-size: 15px;
-    font-family: Paperlogy-3;
+    font-family: Pretendard-3;
     text-align: left;  
     margin-top: 0px;
 `;
@@ -156,13 +156,13 @@ const InputContainer = styled.div`
 const PhoneNumberInput = styled.input`
     border: none;
     font-size: 19px;
-    font-family: Paperlogy-3;
+    font-family: Pretendard-3;
     outline: none;
     padding-left: 10px; /* 왼쪽 여백 추가 */
     flex-grow: 1; /* 입력 필드가 남은 공간을 차지하도록 설정 */
     
     ::placeholder {
-        font-family: Paperlogy-2; 
+        font-family: Pretendard-2; 
         color: #ccc;
     }
 `;
@@ -181,7 +181,7 @@ const DeleteButton = styled.button`
 const Warning = styled.p`
     color: #ee434e;
     font-size: 12px;
-    font-family: Paperlogy-4;
+    font-family: Pretendard-4;
     text-align: left; 
     margin-top: 10px;
 `;
@@ -198,7 +198,7 @@ const ContinueButton = styled.button`
     border-radius: 25px;
     color: white;
     font-size: 17px;
-    font-family: Paperlogy-6;
+    font-family: Pretendard-6;
     border: none;
     height: 54px;
     width: 320px;
