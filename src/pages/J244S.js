@@ -17,7 +17,7 @@ function J244S() {
       setIsExist(true);
       onDelete();
     } else {
-      navigate("/J260S");
+      navigate("/J210S");
     }
   };
 
@@ -53,7 +53,7 @@ function J244S() {
           </Warning>
         </MainContent>
         
-        <FooterContainer>
+        <Footer>
             <FooterText>나중에 변경할 수 있어요. 편하게 입력해 주세요.</FooterText>
             <ContinueButton
                 disabled={!nickname}
@@ -62,7 +62,7 @@ function J244S() {
             >
                 계속하기
             </ContinueButton>
-        </FooterContainer>
+        </Footer>
     </Screen>
   );
 }
@@ -137,7 +137,7 @@ const InputContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid ${(props) => (props.nickname ? "#97C793" : "#ccc")}; 
+    border-bottom: 2px solid ${(props) => (props.nickname ? "#5AC563" : "#ccc")}; 
     padding-bottom: 5px;
     transition: border-bottom 0.3s ease;
 `;
@@ -177,7 +177,7 @@ const Warning = styled.p`
 
 ////Footer부분(계속하기 버튼)////
 
-const FooterContainer = styled.div`
+const Footer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -201,6 +201,6 @@ const ContinueButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: ${(props) => (props.nickname ? "#97C793" : "#E6E6E6")};
+    background-color: ${(props) => (props.nickname ? "#5AC563" : "#E6E6E6")};
     transition: background-color 0.3s ease;
 `;
