@@ -3,14 +3,14 @@ import { styled } from "styled-components";
 
 import GlobalFonts from "./styles/GlobalFonts.js";
 import GlobalStyles from "./styles/GlobalStyles.js";
-import J100S from "./pages/J100S.jsx";
-import J210S from "./pages/J210S.jsx";
+
 import J220S from "./pages/J220S.js";
 import J230S from "./pages/J230S.js";
 import J242S from "./pages/J242S.js";
 import J241S from "./pages/J241S.js"; 
 import J243S from "./pages/J243S.js";
 import J244S from "./pages/J244S.js";
+import J210S from "./pages/J210S.js";
 import J260S from "./pages/J260S.js";
 
 import J310S from "./pages/J310S.js";

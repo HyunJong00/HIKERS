@@ -102,7 +102,7 @@ function LJ243S() {
           ))}
       </HashtagContainer>
 
-      <FooterContainer>
+      <Footer>
         <FooterText>나중에 변경할 수 있어요. 편하게 입력해 주세요.</FooterText>
         <ButtonContainer>
           <ContinueButton onClick={onContinue} disabled={!isAllSelected}>
@@ -110,7 +110,7 @@ function LJ243S() {
           </ContinueButton>
           <SkipButton onClick={onSkip}>건너뛰기</SkipButton>
         </ButtonContainer>
-      </FooterContainer>
+      </Footer>
     </Screen>
   );
 }
@@ -232,7 +232,7 @@ const HashtagBox = styled.div`
 
 /////Footer부분(건너뛰기, 계속하기 버튼)/////
 
-const FooterContainer = styled.div`
+const Footer = styled.div`
   text-align: center;
 `;
 
@@ -249,7 +249,7 @@ const ButtonContainer = styled.div`
 `;
 
 const SkipButton = styled.button`
-    background-color: #97C793; /* 색상 변경 */
+    background-color: #5AC563; /* 색상 변경 */
     color: white;
     padding: 15px 40px; /* 버튼 좌우로 길어지게 변경 */
     border-radius: 50px;
@@ -259,7 +259,7 @@ const SkipButton = styled.button`
 `;
 
 const ContinueButton = styled.button`
-    background-color: ${(props) => (props.disabled ? "#E6E6E6" : "#97C793")};
+    background-color: ${(props) => (props.disabled ? "#E6E6E6" : "#5AC563")};
     color: white;
     padding: 15px 40px; /* 버튼 좌우로 길어지게 변경 */
     border-radius: 50px;

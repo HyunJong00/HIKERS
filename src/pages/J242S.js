@@ -52,12 +52,12 @@ function J242S() {
                 </SliderContainer>
             </MainContent>
 
-            <FooterContainer>
+            <Footer>
                 {/* 나이가 선택되지 않았을 때는 비활성화 */}
                 <ContinueButton onClick={onContinue} disabled={age === null}>
                     계속하기
                 </ContinueButton>
-            </FooterContainer>
+            </Footer>
         </Screen>
     );
 }
@@ -165,7 +165,7 @@ const Slider = styled.input`
         width: 20px;
         height: 20px;
         background: white;
-        border: 3px solid #97C793;
+        border: 3px solid #5AC563;
         cursor: pointer;
         border-radius: 50%;
     }
@@ -174,7 +174,7 @@ const Slider = styled.input`
         width: 20px;
         height: 20px;
         background: white;
-        border: 3px solid #97C793;
+        border: 3px solid #5AC563;
         cursor: pointer;
         border-radius: 50%;
     }
@@ -196,7 +196,7 @@ const SliderTicks = styled.div`
 `;
 
 ////Footer부분(계속하기 버튼)////
-const FooterContainer = styled.div`
+const Footer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -213,7 +213,7 @@ const ContinueButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #97C793;
+    background-color: #5AC563;
     transition: background-color 0.3s ease;
     
     &:disabled {

@@ -67,7 +67,7 @@ function J320S() {
           )}
         </MainContent>
         
-        <FooterContainer>
+        <Footer>
             <ContinueButton
                 disabled={!authCode}
                 onClick={onContinue}
@@ -75,7 +75,7 @@ function J320S() {
             >
                 계속하기
             </ContinueButton>
-        </FooterContainer>
+        </Footer>
     </Screen>
   );
 }
@@ -149,7 +149,7 @@ const InputContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid ${({ isFocused, authCode }) => isFocused || authCode ? "#97C793" : "#ccc"}; /* 포커스 또는 입력 중일 때 초록색 */
+    border-bottom: 2px solid ${({ isFocused, authCode }) => isFocused || authCode ? "#5AC563" : "#ccc"}; /* 포커스 또는 입력 중일 때 초록색 */
     padding-bottom: 5px;
     transition: border-bottom 0.3s ease;
 `;
@@ -189,7 +189,7 @@ const Warning = styled.p`
 
 ////Footer부분(계속하기 버튼)////
 
-const FooterContainer = styled.div`
+const Footer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -206,6 +206,6 @@ const ContinueButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: ${({ authCode }) => authCode ? "#97C793" : "#E6E6E6"}; /* 입력되면 초록색 */
+    background-color: ${({ authCode }) => authCode ? "#5AC563" : "#E6E6E6"}; /* 입력되면 초록색 */
     transition: background-color 0.3s ease;
 `;

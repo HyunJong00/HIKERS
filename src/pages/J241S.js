@@ -73,7 +73,7 @@ function J241S() {
                 </GenderOptions>
             </MainContent>
 
-            <FooterContainer>
+            <Footer>
                 <ContinueButton
                     disabled={!selectedGender}  // 성별이 선택되지 않았을 때 버튼 비활성화
                     onClick={onContinue}
@@ -81,7 +81,7 @@ function J241S() {
                 >
                     계속하기
                 </ContinueButton>
-            </FooterContainer>
+            </Footer>
         </Screen>
     );
 }
@@ -208,7 +208,7 @@ const CustomRadio = styled.div`
 
 ////Footer부분(계속하기 버튼)////
 
-const FooterContainer = styled.div`
+const Footer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -225,6 +225,6 @@ const ContinueButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: ${(props) => (props.disabled ? "#E6E6E6" : "#97C793")}; // 상태에 따른 색 변경
+    background-color: ${(props) => (props.disabled ? "#E6E6E6" : "#5AC563")}; // 상태에 따른 색 변경
     transition: background-color 0.3s ease;
 `;
