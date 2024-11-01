@@ -17,7 +17,7 @@ import J310S from "./pages/J310S.js";
 import J320S from "./pages/J320S.js";
 import J330S from "./pages/J330S.js";
 import S100S from "./pages/S100S.jsx";
-
+import Menu from "./pages/TestPage.jsx";
 const router = createBrowserRouter(
   [
 
@@ -76,6 +76,9 @@ const router = createBrowserRouter(
       path: "/J330S",
       element: <J330S />
     },
+    {
+      path: "/test",
+      element: <Menu/>}
   ],
   { basename: process.env.PUBLIC_URL } 
 );

@@ -11,7 +11,7 @@ function S100S (){
   useEffect(() => {
   const timer = setTimeout(() => {
     navigate('/J100S'); 
-  }, 3000);
+  }, 1500);
 
   return () => clearTimeout(timer);
   }, [navigate]);

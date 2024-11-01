@@ -2,19 +2,28 @@ import styled from 'styled-components';
 import backgroundimage from '../assets/images/J210SBackgroundImage.png';
 import checkbox from '../assets/images/checkboxEmpty.png';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import agree from '../assets/images/J210SAgree.png';
 import backIcon from '../assets/images/backbutton.png';
 import checkboxChecked from '../assets/images/checkboxChecked.png';
+import { AiOutlineCheckCircle } from "react-icons/ai";
+
 
 function J200S(){
     const navigate = useNavigate();
-
-    const handleStartNewClick = () => {
+    const [terms, setTerms] = useState(false);
+    const [privacy, setPrivacy] = useState(false);
+    const [marketing, setMarketing] = useState(false);
+    const handleContinue = () => {
         navigate('/J220S');
     };
+    const handleTerms = () => {
+        setTerms(!terms);
+    }
     const onBack = () => navigate(-1);
 
     return(
+        
         <Screen>
             <Header>
                 <BackButton onClick={onBack}> </BackButton>
@@ -26,7 +35,10 @@ function J200S(){
                         <span> 전체 동의 </span>
                         <button />
                     </AgreeAll>
-                    <Condition>
+                    <Condition onClick={handleTerms} 
+                    >
+                       {/* <AiOutlineCheckCircle/> */}
+                        
                         <button />
                         <p> 이용 약관 (필수) </p>
                         <Details/>
@@ -44,7 +56,11 @@ function J200S(){
                     <hr/>
                 </Agreement>
                 <FooterContainer>
-                    <ContinueButton>계속하기
+                    <ContinueButton 
+                    onClick={handleContinue}
+                    disabled={false}
+                    >
+                        계속하기
                     </ContinueButton>
                 </FooterContainer>
             </Modal>
@@ -103,7 +119,7 @@ const Title = styled.h3`
     margin-top: 40px;
     font-family: paperlogy-6;
     font-size: 19px;
-    `;
+    `;  
 const Agreement = styled.div`
     display: flex;
     flex-direction: column;
