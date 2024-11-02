@@ -1,8 +1,3 @@
-// <Footer activeItem={"home"}/> 이렇게 사용하면 홈 활성화 상태로 렌더링됩니다.
-
-
-
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ReactComponent as HomeIcon } from '../../assets/images/icon-home.svg';
@@ -28,9 +23,9 @@ const FooterItem = ({ Icon, ActiveIcon, text, isActive, onClick }) => {
 };
 
 // 메뉴 컴포넌트
-const Footer = () => {
+const Footer = ({ activeItem: initialActiveItem }) => {
   const navigate = useNavigate(); // 페이지 이동을 위한 navigate 훅
-  const [activeItem, setActiveItem] = useState("home"); // 기본 활성화 메뉴 설정
+  const [activeItem, setActiveItem] = useState(initialActiveItem || "home"); // props로 받은 초기 활성화 메뉴 설정
 
   const menuItems = [
     { name: "home", Icon: HomeIcon, ActiveIcon: HomeIconA, text: '홈', path: '/' },
