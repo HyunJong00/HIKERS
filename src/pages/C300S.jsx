@@ -1,12 +1,13 @@
 import React from 'react';
-import PopularPostList from '../components/common/Post/PopularPostList';
+import PopularPostList from '../components/common/Post/PopularPostList.jsx';
 import post1 from "../assets/images/community/image1.svg";
 import post2 from "../assets/images/community/image2.svg";
 import post3 from "../assets/images/community/image3.svg";
 import post4 from "../assets/images/community/image4.svg";
-import PostList from '../components/common/Post/PostList';
-import Footer from '../components/common/Footer';
-import { GlobalColor } from '../styles/GlobalStyles';
+import PostList from '../components/common/Post/PostList.jsx';
+import Footer from '../components/common/Footer.jsx';
+import { GlobalColor } from '../styles/GlobalStyles.js';
+import Header from '../components/header/Header.js';
 
 const postsData = [
     { title: "포스트 1", likes: 20, thumbnail: post1 },
@@ -17,7 +18,7 @@ const postsData = [
     { title: "포스트 6", likes: 15, thumbnail: post4 },
 ];
 
-function CommunityPage() {
+function C300S() {
   const button = {
     display: 'flex',
     justifyContent: 'center',
@@ -36,6 +37,7 @@ function CommunityPage() {
   return (
     <div style={{ overflowX: 'auto', maxWidth: '100%', position:'relative', height:'100%',paddingBottom: '60px',}}> {/* 가로 스크롤 설정 */}
       <div>
+        <Header/>
         <h2 style={{fontSize:"18px", margin:"10px"}}>실시간 개념글 TOP</h2>
         <PopularPostList posts={postsData} />
         <span style={button}>더보기</span>
@@ -48,7 +50,7 @@ function CommunityPage() {
       <span style={text}>등산용품 </span>
         <PostList posts={postsData.slice(0, 2)} />
       </div>
-      <div style={{position:'absolute',bottom:'0'}}>
+      <div style={{ position: 'absolute', bottom: '0px', left: '50%', transform: 'translateX(-50%)'}}>
       <Footer activeItem={"user"}/>
       </div>
     <div>
@@ -58,4 +60,4 @@ function CommunityPage() {
   );
 }
 
-export default CommunityPage;
+export default C300S;

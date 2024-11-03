@@ -1,8 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { styled } from "styled-components";
-
-import GlobalFonts from "./styles/GlobalFonts.js";
-import GlobalStyles from "./styles/GlobalStyles.js";
+import { GlobalStyles, GlobalFonts } from "./GlobalStyles.js";
 import J100S from "./pages/J100S.js";
 import J220S from "./pages/J220S.js";
 import J230S from "./pages/J230S.js";
@@ -18,7 +16,7 @@ import J320S from "./pages/J320S.js";
 import J330S from "./pages/J330S.js";
 import S100S from "./pages/S100S.jsx";
 import TestPage from "./pages/TestPage.jsx";
-import CommunityPage from "./pages/CommunityPage.jsx";
+import C300S from "./pages/C300S.jsx";
 
 const router = createBrowserRouter(
   [
@@ -79,14 +77,15 @@ const router = createBrowserRouter(
       element: <J330S />
     },
     {
-      path: "/community",
-      element: <CommunityPage/>
+      path: "/C300S",
+      element: <C300S/>
     },
     {
       path: "/test",
       element: <TestPage/>}
   ],
   { basename: process.env.PUBLIC_URL } 
+
 );
 
 function App() {
@@ -102,6 +101,11 @@ function App() {
 const MainScreen = styled.div`
   width: 360px;
   height: 800px;
+
+  // 후에 반응형으로 바꿀 때 쓸 코드
+  // max-width: 500px;
+  // height: 100%;
+
   margin-right: auto;
   margin-left: auto;
   display: flex;
