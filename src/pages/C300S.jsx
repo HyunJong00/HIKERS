@@ -2,11 +2,9 @@ import React from 'react';
 import PopularPostList from '../components/common/Post/PopularPostList.jsx';
 import post1 from "../assets/images/community/image1.svg";
 import post2 from "../assets/images/community/image2.svg";
-import post3 from "../assets/images/community/image3.svg";
 import post4 from "../assets/images/community/image4.svg";
 import PostList from '../components/common/Post/PostList.jsx';
 import Footer from '../components/common/Footer.jsx';
-import { GlobalColor } from '../styles/GlobalStyles.js';
 import Header from '../components/header/Header.js';
 
 const postsData = [
