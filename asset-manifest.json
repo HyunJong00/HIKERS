@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/HIKERS/static/js/main.100147fc.js",
+    "main.js": "/HIKERS/static/js/main.5314ad20.js",
     "static/media/image2.svg": "/HIKERS/static/media/image2.447af7ad76d5c8bb550bcccf5a9040d6.svg",
     "static/media/image4.svg": "/HIKERS/static/media/image4.7a23aac75fb2615a932f642d757d9743.svg",
     "static/media/postframe.svg": "/HIKERS/static/media/postframe.474b285e9ddd46c8af8dd475ba329b46.svg",
@@ -43,9 +43,9 @@
     "static/media/naver.svg": "/HIKERS/static/media/naver.47d4619ca325e23d46b22de2e69e3d5d.svg",
     "static/media/backbutton.svg": "/HIKERS/static/media/backbutton.9d451081420585bb790cafc1d6ae9f0d.svg",
     "static/media/Arrow.svg": "/HIKERS/static/media/Arrow.86eaef3296e15f0b534ca73a15a1a585.svg",
-    "main.100147fc.js.map": "/HIKERS/static/js/main.100147fc.js.map"
+    "main.5314ad20.js.map": "/HIKERS/static/js/main.5314ad20.js.map"
   },
   "entrypoints": [
-    "static/js/main.100147fc.js"
+    "static/js/main.5314ad20.js"
   ]
 }
