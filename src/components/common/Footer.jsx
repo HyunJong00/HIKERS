@@ -28,11 +28,11 @@ const Footer = ({ activeItem: initialActiveItem }) => {
   const [activeItem, setActiveItem] = useState(initialActiveItem || "home"); // props로 받은 초기 활성화 메뉴 설정
 
   const menuItems = [
-    { name: "home", Icon: HomeIcon, ActiveIcon: HomeIconA, text: '홈', path: '/' },
-    { name: "inquiry", Icon: Inquiry, ActiveIcon: InquiryA, text: '기록', path: '/inquiry' },
-    { name: "navi", Icon: Navi, ActiveIcon: NaviA, text: '네비게이션', path: '/navi' },
-    { name: "mount", Icon: Mount, ActiveIcon: MountA, text: '오르락월드', path: '/mount' },
-    { name: "user", Icon: UserIcon, ActiveIcon: UserIconA, text: '커뮤니티', path: '/community' },
+    { name: "home", Icon: HomeIcon, ActiveIcon: HomeIconA, text: '홈', path: '/H100S' },
+    { name: "inquiry", Icon: Inquiry, ActiveIcon: InquiryA, text: '기록', path: '/R273C' },
+    { name: "navi", Icon: Navi, ActiveIcon: NaviA, text: '네비게이션', path: '/M200C' },
+    { name: "mount", Icon: Mount, ActiveIcon: MountA, text: '오르락월드', path: '/game' },
+    { name: "user", Icon: UserIcon, ActiveIcon: UserIconA, text: '커뮤니티', path: '/C300S' },
   ];
 
   const handleClick = (name, path) => {

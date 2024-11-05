@@ -53,32 +53,32 @@ function C300S() {
         <button style={button}>더보기</button>
       </div>
       <hr style={{ border: '4px solid #F4F7F9', width: '100%' }} />
-      <div>
-      <button
-        onClick={() => handleButtonClick('나의글')}
-        style={buttonSelect === '나의글' ? { ...text, backgroundColor: 'black', color: 'white' } : text}
-      >
-        나의글
-      </button>
-      <button
-        onClick={() => handleButtonClick('개념글')}
-        style={buttonSelect === '개념글' ? { ...text, backgroundColor: 'black', color: 'white' } : text}
-      >
-        개념글
-      </button>
-      <button
-        onClick={() => handleButtonClick('자유게시판')}
-        style={buttonSelect === '자유게시판' ? { ...text, backgroundColor: 'black', color: 'white' } : text}
-      >
-        자유게시판
-      </button>
-      <button
-        onClick={() => handleButtonClick('등산용품')}
-        style={buttonSelect === '등산용품' ? { ...text, backgroundColor: 'black', color: 'white' } : text}
-      >
-        등산용품
-      </button>
-        <PostList posts={postsData.slice(0, 4)} />
+      <div style={{margin:'16px'}}>
+        <button
+          onClick={() => handleButtonClick('나의글')}
+          style={buttonSelect === '나의글' ? { ...text, backgroundColor: 'black', color: 'white' } : text}
+        >
+          나의글
+        </button>
+        <button
+          onClick={() => handleButtonClick('개념글')}
+          style={buttonSelect === '개념글' ? { ...text, backgroundColor: 'black', color: 'white' } : text}
+        >
+          개념글
+        </button>
+        <button
+          onClick={() => handleButtonClick('자유게시판')}
+          style={buttonSelect === '자유게시판' ? { ...text, backgroundColor: 'black', color: 'white' } : text}
+        >
+          자유게시판
+        </button>
+        <button
+          onClick={() => handleButtonClick('등산용품')}
+          style={buttonSelect === '등산용품' ? { ...text, backgroundColor: 'black', color: 'white' } : text}
+        >
+          등산용품
+        </button>
+          <PostList posts={postsData.slice(0, 4)} />
       </div>
       <div style={{ position: 'sticky', bottom: '0px', display:'flex',justifyContent:'center'}}>
       <Footer activeItem={"user"} />
