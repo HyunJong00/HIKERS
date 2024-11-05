@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
+
 
 import logo from "../../assets/OrurakLogo.png";
 import { ReactComponent as Favorite } from "../../assets/home/Favorite.svg";
@@ -7,6 +9,13 @@ import notice from "../../assets/home/Notice.svg";
 import { GlobalColor } from "../../GlobalStyles";
 
 export default function Header() {
+  const navigate = useNavigate();
+  const handleNavigation = (path) => {
+    navigate('/R00S'); // 지정된 경로로 이동
+  };
+
+
+
   return (
     <Head>
       <Title>
@@ -17,7 +26,7 @@ export default function Header() {
         <Favorite fill="none" stroke="black" />
         <img src={notice} alt="notice" />
         {/* 임시 사용자 프로필 */}
-        <div className="profile">현우</div>
+        <div className="profile" onClick={handleNavigation} style = {{cursor:'pointer'}}>에이든</div>
       </IconContainer>
     </Head>
   );
@@ -68,13 +77,13 @@ const IconContainer = styled.div`
   .profile {
     display: flex;
     justify-content: center;
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
     align-items: center;
     margin: 0 6px;
 
-    background-color: purple;
+    background-color: green;
     color: #fff;
 
     text-align: center;

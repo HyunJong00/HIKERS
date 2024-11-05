@@ -22,6 +22,7 @@ import S100S from "./pages/S100S.jsx";
 import TestPage from "./pages/TestPage.jsx";
 import C300S from "./pages/C300S.jsx";
 import Game from "./pages/Game.jsx";
+import R00S from "./pages/R00S.jsx";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           <Route path="/game" element={<Game />} />
           <Route path="/test" element={<TestPage />} />
           <Route path="/H100S" element={<H100S />} />
+          <Route path="/R00S" element={<R00S />} />
         </Routes>
       </HashRouter>
       <GlobalFonts />
