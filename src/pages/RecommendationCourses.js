@@ -8,30 +8,7 @@ import RecommendationCourseBox from "../components/home/RecommendationCourseBox"
 export default function RecommendationCourses() {
   return (
     <Container>
-      {/* 첫 "+" 버튼은 따로 만들어야 할 듯 */}
-      <div className="filter">
-        <FilterButtons /> {/* 아직 기능 없음 */}
-      </div>
-
-      <div className="containedContent">
-        <div className="head">
-          <span className="title">오르락 사장님 추천코스</span>
-          <div className="location">
-            <img src={location} alt="location" />
-            {/* 임시 텍스트 */}
-            <span className="locationText">익산시, 신동</span>
-          </div>
-        </div>
-        <div className="subtitle">
-          유저님을 위해 오르락 멤버들이 손수 모아봤어요!
-          <br />
-          1:1 맞춤형 등산로 포트폴리오
-        </div>
-
-        <div className="courses">
-          <RecommendationCourseBox />
-        </div>
-      </div>
+      <RecommendationCourseBox />
     </Container>
   );
 }
