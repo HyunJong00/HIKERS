@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import logoIcon from '../assets/images/logo.png'; 
-import kakaoIcon from '../assets/images/kakaotalk.png';
-import googleIcon from '../assets/images/google.png'; 
-import naverIcon from '../assets/images/naver.png';
+import logoIcon from '../assets/images/logo.svg'; 
+import kakaoIcon from '../assets/images/kakaotalk.svg';
+import googleIcon from '../assets/images/google.svg'; 
+import naverIcon from '../assets/images/naver.svg';
 
 function J100S() {
   const navigate = useNavigate();

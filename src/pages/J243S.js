@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import styled from "styled-components";
-import backIcon from '../assets/images/backbutton.png';
+import backIcon from '../assets/images/backbutton.svg';
 import downIcon from '../assets/images/downbutton.png';
 
 function LJ243S() {

@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import styled from "styled-components";
-import backIcon from '../assets/images/backbutton.png';
-import xbuttonimage from '../assets/images/xbutton.png';
+import backIcon from '../assets/images/backbutton.svg';
+import xbuttonimage from '../assets/images/xbutton.svg';
 
 function J310S() {
   const [phoneNumber, setPhoneNumber] = useState("");

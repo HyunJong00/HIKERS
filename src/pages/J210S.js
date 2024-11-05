@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import styled from "styled-components";
-import backIcon from '../assets/images/backbutton.png'; 
-import checkboxyes from '../assets/images/checkboxyes.png';
-import checkboxno from '../assets/images/checkboxno.png';
-import rightarrow from '../assets/images/rightarrow.png';
+import backIcon from '../assets/images/backbutton.svg'; 
+import checkboxyes from '../assets/images/checkboxyes.svg';
+import checkboxno from '../assets/images/checkboxno.svg';
+import rightarrow from '../assets/images/rightarrow.svg';
 
 function J210S() {
   const navigate = useNavigate();
