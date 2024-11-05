@@ -1,11 +1,14 @@
 {
   "files": {
-    "main.js": "/HIKERS/static/js/main.fcb47a5a.js",
+    "main.js": "/HIKERS/static/js/main.46dbb560.js",
+    "static/media/leage.svg": "/HIKERS/static/media/leage.6be2692bce49dcbca6e3404f632fd72a.svg",
+    "static/media/record.svg": "/HIKERS/static/media/record.42d587104f4ff3e7f9fc7302a1003200.svg",
     "static/media/image2.svg": "/HIKERS/static/media/image2.447af7ad76d5c8bb550bcccf5a9040d6.svg",
     "static/media/image4.svg": "/HIKERS/static/media/image4.7a23aac75fb2615a932f642d757d9743.svg",
     "static/media/postframe.svg": "/HIKERS/static/media/postframe.474b285e9ddd46c8af8dd475ba329b46.svg",
     "static/media/image1.svg": "/HIKERS/static/media/image1.0863c826d7a829b36e00fb865308b613.svg",
     "static/media/image3.svg": "/HIKERS/static/media/image3.25b2944f54b4dd59ae5c3bf18be1a6d5.svg",
+    "static/media/game.svg": "/HIKERS/static/media/game.bf8a8e0862f44b75117647b10421e6ec.svg",
     "static/media/advertise-example.png": "/HIKERS/static/media/advertise-example.3a604031adf5cce45357.png",
     "static/media/informationframe.svg": "/HIKERS/static/media/informationframe.306d05fd3828cbdaa4138c8b41212309.svg",
     "static/media/logo.svg": "/HIKERS/static/media/logo.6eb8975fc2fa505effc4687f6c340fcf.svg",
@@ -43,9 +46,9 @@
     "static/media/naver.svg": "/HIKERS/static/media/naver.47d4619ca325e23d46b22de2e69e3d5d.svg",
     "static/media/backbutton.svg": "/HIKERS/static/media/backbutton.9d451081420585bb790cafc1d6ae9f0d.svg",
     "static/media/Arrow.svg": "/HIKERS/static/media/Arrow.86eaef3296e15f0b534ca73a15a1a585.svg",
-    "main.fcb47a5a.js.map": "/HIKERS/static/js/main.fcb47a5a.js.map"
+    "main.46dbb560.js.map": "/HIKERS/static/js/main.46dbb560.js.map"
   },
   "entrypoints": [
-    "static/js/main.fcb47a5a.js"
+    "static/js/main.46dbb560.js"
   ]
 }
