@@ -5,8 +5,6 @@ function MapSection() {
     <div className="map-section">
       <div className="badge"><span>완등인증</span></div>
       <div className="route">
-        <div>START</div>
-        <div>FINISH</div>
       </div>
       <div className="map-buttons">
         <div className="map-button">
