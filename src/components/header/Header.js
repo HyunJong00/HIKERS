@@ -11,7 +11,7 @@ import { GlobalColor } from "../../GlobalStyles";
 export default function Header() {
   const navigate = useNavigate();
   const handleNavigation = (path) => {
-    navigate('/R00S'); // 지정된 경로로 이동
+    navigate('/R273C'); // 지정된 경로로 이동
   };
 
 

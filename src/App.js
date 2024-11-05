@@ -58,10 +58,11 @@ function App() {
 }
 
 const MainScreen = styled.div`
-  max-width: calc(100vh * 36 / 80);
-  height: 100%;
+  //max-width: calc(100vh * 36 / 80);
   max-width: calc(100vh * 480 / 800);
   height: 100%;
+  //width:360px;
+  //height: 800px;
   margin-right: auto;
   margin-left: auto;
   display: flex;

@@ -21,7 +21,7 @@ function R273C() {
         setActiveTab(tab);
     };
 
-    const goToLeague = () => navigate("/game");
+    const goToLeague = () => navigate("/R00S");
     const goToGame = () => navigate("/game");
 
     const renderContent = () => {

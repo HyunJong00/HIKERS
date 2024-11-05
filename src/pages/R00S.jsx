@@ -4,7 +4,7 @@ import Footer from '../components/common/Footer.jsx';
 import React from 'react';
 
 function R00S() {
-    const [boolean, setBoolean] = React.useState(true);
+    const [boolean, setBoolean] = React.useState(false);
 
     return (
         <div>
@@ -13,7 +13,7 @@ function R00S() {
             }>
             {boolean ? <img src={record} alt="record" /> : <img src={leage} alt="leage" />}
             </div>
-            <Footer activeItem={'user'} />
+            <Footer activeItem={'inquiry'} />
         </div>
     )
 }

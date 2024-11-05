@@ -1,9 +1,12 @@
-
+import React from 'react';
+import Footer from '../components/common/Footer.jsx';
+import gameImage from '../assets/images/game/game.svg';
 
 function Game() {
     return (
         <div>
-            <h1>서비스가 준비중입니다</h1>
+            <img src={gameImage} alt="game" />
+            <Footer activeItem={'mount'} />
         </div>
     )
 }

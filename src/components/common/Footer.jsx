@@ -40,7 +40,7 @@ const Footer = ({ activeItem: initialActiveItem }) => {
       Icon: Inquiry,
       ActiveIcon: InquiryA,
       text: "기록",
-      path: "/R273C",
+      path: "/R00S",
     },
     {
       name: "navi",
