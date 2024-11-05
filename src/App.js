@@ -16,6 +16,7 @@ import J330S from "./pages/J330S.js";
 import S100S from "./pages/S100S.jsx";
 import TestPage from "./pages/TestPage.jsx";
 import C300S from "./pages/C300S.jsx";
+import Game from "./pages/Game.jsx";
 
 const router = createBrowserRouter(
   [
@@ -34,6 +35,7 @@ const router = createBrowserRouter(
     { path: "/J320S", element: <J320S /> },
     { path: "/J330S", element: <J330S /> },
     { path: "/C300S", element: <C300S /> },
+    { path: "/game", element: <Game />}, 
     { path: "/test", element: <TestPage /> }
   ],
   { basename: process.env.PUBLIC_URL }
