@@ -21,6 +21,9 @@ function R273C() {
         setActiveTab(tab);
     };
 
+    const goToLeague = () => navigate("/league");
+    const goToGame = () => navigate("/game");
+
     const renderContent = () => {
         switch (activeTab) {
             case "등산 정보":
@@ -61,12 +64,12 @@ function R273C() {
                     <InfoEditButton>정보 수정</InfoEditButton>  
                 </UserInfo>
                 <UserRank>
-                    <LeagueBox>
+                    <LeagueBox onClick={goToLeague}> 
                         <img src={leagueIcon} alt="League" />
                         <RankInfo>실버 League</RankInfo>
                         <RankPosition>5위</RankPosition>
                     </LeagueBox>
-                    <GameBox>
+                    <GameBox onClick={goToGame}> 
                         <img src={levelIcon} alt="Level" />
                         <GameContent>
                             <GameInfoContainer>
