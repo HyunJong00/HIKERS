@@ -1,9 +1,10 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import React from 'react';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { styled } from "styled-components";
 import { GlobalStyles, GlobalFonts } from "./GlobalStyles.js";
 
+// 페이지 컴포넌트 import
 import H100S from "./pages/H100S.js";
-
 import J100S from "./pages/J100S.js";
 import J220S from "./pages/J220S.js";
 import J230S from "./pages/J230S.js";
@@ -17,41 +18,37 @@ import J310S from "./pages/J310S.js";
 import J320S from "./pages/J320S.js";
 import J330S from "./pages/J330S.js";
 import R273C from "./pages/R273C.js";
-
 import S100S from "./pages/S100S.jsx";
 import TestPage from "./pages/TestPage.jsx";
 import C300S from "./pages/C300S.jsx";
 import Game from "./pages/Game.jsx";
 
-const router = createBrowserRouter(
-  [
-    { path: "/", element: <H100S /> },
-    { path: "/S100S", element: <S100S /> },
-    { path: "/J100S", element: <J100S /> },
-    { path: "/J210S", element: <J210S /> },
-    { path: "/J220S", element: <J220S /> },
-    { path: "/J230S", element: <J230S /> },
-    { path: "/J242S", element: <J242S /> },
-    { path: "/J241S", element: <J241S /> },
-    { path: "/J243S", element: <J243S /> },
-    { path: "/J244S", element: <J244S /> },
-    { path: "/J260S", element: <J260S /> },
-    { path: "/J310S", element: <J310S /> },
-    { path: "/J320S", element: <J320S /> },
-    { path: "/J330S", element: <J330S /> },
-    { path: "/C300S", element: <C300S /> },
-    { path: "/R273C", element: <R273C /> },
-    { path: "/game", element: <Game /> },
-    { path: "/test", element: <TestPage /> },
-    { path: "/H100S", element: <H100S /> },
-  ],
-  { basename: process.env.PUBLIC_URL }
-);
-
 function App() {
   return (
     <MainScreen>
-      <RouterProvider router={router} />
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<H100S />} />
+          <Route path="/S100S" element={<S100S />} />
+          <Route path="/J100S" element={<J100S />} />
+          <Route path="/J210S" element={<J210S />} />
+          <Route path="/J220S" element={<J220S />} />
+          <Route path="/J230S" element={<J230S />} />
+          <Route path="/J242S" element={<J242S />} />
+          <Route path="/J241S" element={<J241S />} />
+          <Route path="/J243S" element={<J243S />} />
+          <Route path="/J244S" element={<J244S />} />
+          <Route path="/J260S" element={<J260S />} />
+          <Route path="/J310S" element={<J310S />} />
+          <Route path="/J320S" element={<J320S />} />
+          <Route path="/J330S" element={<J330S />} />
+          <Route path="/C300S" element={<C300S />} />
+          <Route path="/R273C" element={<R273C />} />
+          <Route path="/game" element={<Game />} />
+          <Route path="/test" element={<TestPage />} />
+          <Route path="/H100S" element={<H100S />} />
+        </Routes>
+      </HashRouter>
       <GlobalFonts />
       <GlobalStyles />
     </MainScreen>
@@ -59,11 +56,7 @@ function App() {
 }
 
 const MainScreen = styled.div`
-  // width: 360px;
-  // height: 800px;
-  // 후에 반응형으로 바꿀 때 쓸 코드
   max-width: calc(100vh * 36 / 80);
-  // max-width: 500px;
   height: 100%;
   max-width: calc(100vh * 480 / 800);
   height: 100%;

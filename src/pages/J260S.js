@@ -1,8 +1,19 @@
 import styled from "styled-components";
 import clapImage from '../assets/images/clap.png';
 import completeBackground from '../assets/images/complete.png';
+import { useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
+
 
 function J260S() {
+    const navigate = useNavigate();
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          navigate('/H100S'); 
+        }, 1500);
+      
+        return () => clearTimeout(timer);
+        }, [navigate]);
     return (
         <Screen>
             <ClapImage src={clapImage} alt="Clap" />
