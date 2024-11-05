@@ -1,24 +1,24 @@
 import { styled } from "styled-components";
 import { useState } from "react";
 
-import search from "../../assets/home/Search.svg";
+import { GlobalColor } from "../../GlobalStyles";
 
 export default function MainTab() {
   const [cur, setCur] = useState(1);
-  const options = [
-    `지도 뷰 <img src=${search} alt='s' />`,
-    "오르락 추천코스",
-    "테마별 코스",
-  ];
+  const options = ["오르락 추천 코스", "테마별 코스", "지도 뷰"];
 
   return (
     <Container>
       {options.map((txt, index) => (
         <span
           onClick={() => setCur(index)}
-          dangerouslySetInnerHTML={{ __html: txt }}
-          style={{ color: cur === index ? "#000" : "#3C6270" }}
-        />
+          style={{
+            color:
+              cur === index ? GlobalColor.Main[80] : GlobalColor.GrayScale[50],
+          }}
+        >
+          {txt}
+        </span>
       ))}
     </Container>
   );
@@ -26,32 +26,23 @@ export default function MainTab() {
 
 const Container = styled.div`
   display: flex;
-  height: 34px;
-  padding: 3px;
+  padding: 12px 16px;
   align-items: center;
-  margin-top: 8.5px;
-  justify-content: space-evenly;
+  gap: 16px;
 
-  border-radius: 10px;
-  border: 0.8px solid #a1bfce;
-  background: #fff;
-  box-shadow: 0px 0.8px 3.2px 0px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid ${GlobalColor.GrayScale[30]};
 
   span {
-    color: #3c6270;
-    text-align: center;
-    font-feature-settings: "liga" off, "clig" off;
-    font-family: Paperlogy-6;
-    font-size: 13.057px;
-    font-style: normal;
-    line-height: 16.713px; /* 128% */
-    display: flex;
-    align-items: center;
-  }
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
 
-  img {
-    width: 13.928px;
-    height: 13.928px;
-    flex-shrink: 0;
+    overflow: hidden;
+    font-feature-settings: "liga" off, "clig" off;
+    text-overflow: ellipsis;
+    font-family: Pretendard-7;
+    font-size: 16px;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.2px;
   }
 `;
