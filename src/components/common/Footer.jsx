@@ -1,8 +1,3 @@
-// <Footer activeItem={"home"}/> 이렇게 사용하면 홈 활성화 상태로 렌더링됩니다.
-
-
-
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ReactComponent as HomeIcon } from '../../assets/images/icon-home.svg';
@@ -28,16 +23,16 @@ const FooterItem = ({ Icon, ActiveIcon, text, isActive, onClick }) => {
 };
 
 // 메뉴 컴포넌트
-const Footer = () => {
+const Footer = ({ activeItem: initialActiveItem }) => {
   const navigate = useNavigate(); // 페이지 이동을 위한 navigate 훅
-  const [activeItem, setActiveItem] = useState("home"); // 기본 활성화 메뉴 설정
+  const [activeItem, setActiveItem] = useState(initialActiveItem || "home"); // props로 받은 초기 활성화 메뉴 설정
 
   const menuItems = [
-    { name: "home", Icon: HomeIcon, ActiveIcon: HomeIconA, text: '홈', path: '/' },
-    { name: "inquiry", Icon: Inquiry, ActiveIcon: InquiryA, text: '기록', path: '/inquiry' },
-    { name: "navi", Icon: Navi, ActiveIcon: NaviA, text: '네비게이션', path: '/navi' },
-    { name: "mount", Icon: Mount, ActiveIcon: MountA, text: '오르락월드', path: '/mount' },
-    { name: "user", Icon: UserIcon, ActiveIcon: UserIconA, text: '커뮤니티', path: '/community' },
+    { name: "home", Icon: HomeIcon, ActiveIcon: HomeIconA, text: '홈', path: '/H100S' },
+    { name: "inquiry", Icon: Inquiry, ActiveIcon: InquiryA, text: '기록', path: '/R273C' },
+    { name: "navi", Icon: Navi, ActiveIcon: NaviA, text: '네비게이션', path: '/M200C' },
+    { name: "mount", Icon: Mount, ActiveIcon: MountA, text: '오르락월드', path: '/game' },
+    { name: "user", Icon: UserIcon, ActiveIcon: UserIconA, text: '커뮤니티', path: '/C300S' },
   ];
 
   const handleClick = (name, path) => {
@@ -68,6 +63,9 @@ const styles = {
     flexDirection: 'row',
     alignItems: 'center',
     gap: '10px',
+    backgroundColor: '#fff',
+    width: '100%',
+    justifyContent: 'space-around',
   },
   menuItem: {
     display: 'flex',

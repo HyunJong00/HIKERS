@@ -1,5 +1,5 @@
 import React from "react";
-import backgroundimage from '../assets/images/SPbackground.png';
+import backgroundimage from '../assets/splash/splash.svg';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from "react";
 import styled from "styled-components";
@@ -17,10 +17,7 @@ function S100S (){
   }, [navigate]);
 
   return (
-    <Screen>
-      <h1>오르락</h1>
-      <p>오르는 즐거움은 오르락과 함께</p>
-    </Screen>
+    <Screen/>
   );
 };
 

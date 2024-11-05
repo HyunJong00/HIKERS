@@ -117,4 +117,6 @@ const GlobalFonts = createGlobalStyle`
 }
 `;
 
+
 export { GlobalStyles, GlobalFonts, GlobalColor };
+

@@ -1,6 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { styled } from "styled-components";
-
 import { GlobalStyles, GlobalFonts } from "./GlobalStyles.js";
 
 import J100S from "./pages/J100S.js";
@@ -12,73 +11,39 @@ import J243S from "./pages/J243S.js";
 import J244S from "./pages/J244S.js";
 import J210S from "./pages/J210S.js";
 import J260S from "./pages/J260S.js";
-
 import J310S from "./pages/J310S.js";
 import J320S from "./pages/J320S.js";
 import J330S from "./pages/J330S.js";
-
 import R273C from "./pages/R273C.js";
+
+
+import S100S from "./pages/S100S.jsx";
+import TestPage from "./pages/TestPage.jsx";
+import C300S from "./pages/C300S.jsx";
+import Game from "./pages/Game.jsx";
 
 const router = createBrowserRouter(
   [
-
-    {path: "/",
-      element: <J100S />},
-    {
-      path: "/J100S",
-      element: <J100S />,
-    },
-    {
-      path: "/J210S",
-      element: <J210S />,
-    },
-    {
-      path: "/J220S",
-      element: <J220S />,
-    },
-    {
-      path: "/J230S", 
-      element: <J230S />,
-    },
-    {
-      path: "/J242S", 
-      element: <J242S />, 
-    },
-    {
-      path: "/J241S", 
-      element: <J241S />, 
-    },
-    {
-      path: "/J243S",
-      element: <J243S />,
-    },
-    {
-      path: "/J244S",
-      element: <J244S />,
-    },
-    {
-      path: "/J260S",
-      element: <J260S />,
-    },
-
-    {
-      path: "/J310S",
-      element: <J310S />,
-    },
-    {
-      path: "/J320S",
-      element: <J320S />,
-    },
-    {
-      path: "/J330S",
-      element: <J330S />
-    },
-    {
-      path: "/R273C",
-      element: <R273C />
-    }
+    { path: "/", element: <S100S /> },
+    { path: "/S100S", element: <S100S /> },
+    { path: "/J100S", element: <J100S /> },
+    { path: "/J210S", element: <J210S /> },
+    { path: "/J220S", element: <J220S /> },
+    { path: "/J230S", element: <J230S /> },
+    { path: "/J242S", element: <J242S /> },
+    { path: "/J241S", element: <J241S /> },
+    { path: "/J243S", element: <J243S /> },
+    { path: "/J244S", element: <J244S /> },
+    { path: "/J260S", element: <J260S /> },
+    { path: "/J310S", element: <J310S /> },
+    { path: "/J320S", element: <J320S /> },
+    { path: "/J330S", element: <J330S /> },
+    { path: "/C300S", element: <C300S /> },
+    { path: "/R273C", element: <R273C /> },
+    { path: "/game", element: <Game />}, 
+    { path: "/test", element: <TestPage /> }
   ],
-  { basename: process.env.PUBLIC_URL } 
+  { basename: process.env.PUBLIC_URL }
 );
 
 function App() {
@@ -92,8 +57,8 @@ function App() {
 }
 
 const MainScreen = styled.div`
-  width: 360px;
-  height: 800px;
+  max-width: calc(100vh * 480/800);
+  height: 100%;
   margin-right: auto;
   margin-left: auto;
   display: flex;
