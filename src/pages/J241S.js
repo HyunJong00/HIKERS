@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import styled from "styled-components";
-import backIcon from '../assets/images/backbutton.png';
+import backIcon from '../assets/images/backbutton.svg';
 
 function J241S() {
     const navigate = useNavigate();
@@ -134,7 +134,7 @@ const Title = styled.h3`
     width: 100%;
     height: 27px;
     font-size: 23px;
-    font-family: Paperlogy-7;
+    font-family: Pretendard-7;
     text-align: left;
     margin-top: 20px;
 `;
@@ -143,7 +143,7 @@ const SubTitle = styled.p`
     width: auto;
     height: 20px;
     font-size: 15px;
-    font-family: Paperlogy-3;
+    font-family: Pretendard-3;
     text-align: left;
     margin-top: 0px;
     box-sizing: border-box;
@@ -170,7 +170,7 @@ const Label = styled.label`
     border-radius: 10px;
     cursor: pointer;
     transition: border-color 0.3s ease;
-    font-family: Paperlogy-7;
+    font-family: Pretendard-7;
     box-sizing: border-box;
     justify-content: space-between;
     text-align: center;
@@ -218,7 +218,7 @@ const ContinueButton = styled.button`
     border-radius: 25px;
     color: white;
     font-size: 17px;
-    font-family: Paperlogy-6;
+    font-family: Pretendard-6;
     border: none;
     height: 54px;
     width: 320px;

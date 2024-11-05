@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { styled } from "styled-components";
 import { GlobalStyles, GlobalFonts } from "./GlobalStyles.js";
+
 import J100S from "./pages/J100S.js";
 import J220S from "./pages/J220S.js";
 import J230S from "./pages/J230S.js";
@@ -13,6 +14,9 @@ import J260S from "./pages/J260S.js";
 import J310S from "./pages/J310S.js";
 import J320S from "./pages/J320S.js";
 import J330S from "./pages/J330S.js";
+import R273C from "./pages/R273C.js";
+
+
 import S100S from "./pages/S100S.jsx";
 import TestPage from "./pages/TestPage.jsx";
 import C300S from "./pages/C300S.jsx";
@@ -35,6 +39,7 @@ const router = createBrowserRouter(
     { path: "/J320S", element: <J320S /> },
     { path: "/J330S", element: <J330S /> },
     { path: "/C300S", element: <C300S /> },
+    { path: "/R273C", element: <R273C /> },
     { path: "/game", element: <Game />}, 
     { path: "/test", element: <TestPage /> }
   ],

@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import styled from "styled-components";
-import backIcon from '../assets/images/backbutton.png'; 
-import checkboxyes from '../assets/images/checkboxyes.png';
-import checkboxno from '../assets/images/checkboxno.png';
-import rightarrow from '../assets/images/rightarrow.png';
+import backIcon from '../assets/images/backbutton.svg'; 
+import checkboxyes from '../assets/images/checkboxyes.svg';
+import checkboxno from '../assets/images/checkboxno.svg';
+import rightarrow from '../assets/images/rightarrow.svg';
 
 function J210S() {
   const navigate = useNavigate();
@@ -114,8 +114,8 @@ const MainContent = styled.div`
 const Title = styled.h3`
     width: 100%; 
     height: 27px; 
-    font-size: 19px;
-    font-family: Paperlogy-7;
+    font-size: 21px;
+    font-family: Pretendard-7;
     text-align: left;  
     margin-top: 20px; 
 `;
@@ -150,7 +150,7 @@ const Checkbox = styled.div`
 
 const AgreementText = styled.span`
   font-size: 15px;
-  font-family: Paperlogy-5;
+  font-family: Pretendard-5;
   color: #333;
   flex-grow: 1;
 `;
@@ -179,7 +179,7 @@ const ContinueButton = styled.button`
   border-radius: 25px;
   color: white;
   font-size: 17px;
-  font-family: Paperlogy-6;
+  font-family: Pretendard-6;
   border: none;
   height: 54px;
   width: 320px;

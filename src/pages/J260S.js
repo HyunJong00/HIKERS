@@ -42,7 +42,7 @@ const TextSmall = styled.span`
     text-align: center;
     color: #222222;
     font-size: 17px;
-    font-family: Paperlogy-7;
+    font-family: Pretendard-7;
     word-wrap: break-word;
 `;
 
@@ -51,6 +51,6 @@ const TextLarge = styled.span`
     text-align: center;
     color: #222222;
     font-size: 23px;
-    font-family: Paperlogy-7;
+    font-family: Pretendard-7;
     word-wrap: break-word;
 `;
