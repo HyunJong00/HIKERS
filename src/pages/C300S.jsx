@@ -8,19 +8,26 @@ import Footer from '../components/common/Footer.jsx';
 import Header from '../components/header/Header.js';
 
 const postsData = [
-    { title: "포스트 1", likes: 20, thumbnail: post1 },
-    { title: "포스트 2", likes: 35, thumbnail: post2 },
-    { title: "포스트 3", likes: 12, thumbnail: post1 },
-    { title: "포스트 4", likes: 50, thumbnail: post4 },
-    { title: "포스트 5", likes: 5, thumbnail: post4 },
-    { title: "포스트 6", likes: 15, thumbnail: post4 },
+    { title: "북한산 꿀팁!", likes: 2003, thumbnail: post1 },
+    { title: "응봉산 등반 인증", likes: 305, thumbnail: post2 },
+    { title: "청계산 난이도 질문", likes: 102, thumbnail: post1 },
+    { title: "등린이 뜻", likes: 500, thumbnail: post4 },
+    { title: "백암산 등산코스", likes: 50, thumbnail: post4 },
+    { title: "포스트 6", likes: 105, thumbnail: post4 },
 ];
 
 function C300S() {
+  const [buttonSelect, setButtonSelect] = React.useState('자유게시판');
+  const handleButtonClick = (buttonName) => {
+    setButtonSelect(buttonName);
+  };
+
+
   const button = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    border: 'none',
     width: '90%',
     height: '30px',
     margin: 'auto auto',
@@ -30,26 +37,51 @@ function C300S() {
     cursor: 'pointer',
   };
   const text = {
-    fontSize:"13px", borderRadius:"99px", border:'1px solid #EAEDF4', padding:'3px', margin:'5px'
+    fontSize:"13px", 
+    borderRadius:"99px", 
+    border:'1px solid #EAEDF4', 
+    padding:'3px', 
+    margin:'5px',
+    cursor: 'pointer',
   };
   return (
-    <div style={{ overflowX: 'auto', maxWidth: '100%', position:'relative', height:'100%',paddingBottom: '60px',}}> {/* 가로 스크롤 설정 */}
-      <div>
+    <div style={{maxWidth: '100%', position:'relative', height:'100%',paddingBottom: '60px',}}> {/* 가로 스크롤 설정 */}
+      <div style={{margin:'16px'}}>
         <Header/>
-        <h2 style={{fontSize:"18px", margin:"10px"}}>실시간 개념글 TOP</h2>
+        <h2 style={{fontSize:"18px"}}>실시간 개념글 TOP</h2>
         <PopularPostList posts={postsData} />
-        <span style={button}>더보기</span>
+        <button style={button}>더보기</button>
       </div>
       <hr style={{ border: '4px solid #F4F7F9', width: '100%' }} />
       <div>
-      <span style={text}>나의글 </span>
-      <span style={text}>개념글 </span>
-      <span style={{backgroundColor:'black',color:'white',fontSize:"13px", borderRadius:"99px", border:'1px solid #EAEDF4', padding:'5px', margin:'5px'}}>자유게시판 </span>
-      <span style={text}>등산용품 </span>
-        <PostList posts={postsData.slice(0, 2)} />
+      <button
+        onClick={() => handleButtonClick('나의글')}
+        style={buttonSelect === '나의글' ? { ...text, backgroundColor: 'black', color: 'white' } : text}
+      >
+        나의글
+      </button>
+      <button
+        onClick={() => handleButtonClick('개념글')}
+        style={buttonSelect === '개념글' ? { ...text, backgroundColor: 'black', color: 'white' } : text}
+      >
+        개념글
+      </button>
+      <button
+        onClick={() => handleButtonClick('자유게시판')}
+        style={buttonSelect === '자유게시판' ? { ...text, backgroundColor: 'black', color: 'white' } : text}
+      >
+        자유게시판
+      </button>
+      <button
+        onClick={() => handleButtonClick('등산용품')}
+        style={buttonSelect === '등산용품' ? { ...text, backgroundColor: 'black', color: 'white' } : text}
+      >
+        등산용품
+      </button>
+        <PostList posts={postsData.slice(0, 4)} />
       </div>
-      <div style={{ position: 'absolute', bottom: '0px', left: '50%', transform: 'translateX(-50%)'}}>
-      <Footer activeItem={"user"}/>
+      <div style={{ position: 'sticky', bottom: '0px', display:'flex',justifyContent:'center'}}>
+      <Footer activeItem={"user"} />
       </div>
     <div>
 

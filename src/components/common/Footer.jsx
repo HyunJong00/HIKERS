@@ -63,6 +63,9 @@ const styles = {
     flexDirection: 'row',
     alignItems: 'center',
     gap: '10px',
+    backgroundColor: '#fff',
+    width: '100%',
+    justifyContent: 'space-around',
   },
   menuItem: {
     display: 'flex',

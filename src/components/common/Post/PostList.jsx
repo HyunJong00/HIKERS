@@ -24,6 +24,7 @@ const PostList = ({ posts }) => {
       flexDirection: 'column',
       gap: '10px',
       padding: '10px',
+      cursor: 'pointer',
     },
     post: {
       display: 'flex',

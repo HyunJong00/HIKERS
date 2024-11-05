@@ -11,6 +11,7 @@ const PopularPostList = ({ posts }) => {
     padding: '10px',
     textAlign: 'center',
     marginRight: '10px',
+    cursor: 'pointer',
   };
 
   return (
