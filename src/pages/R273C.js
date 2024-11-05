@@ -21,7 +21,7 @@ function R273C() {
         setActiveTab(tab);
     };
 
-    const goToLeague = () => navigate("/league");
+    const goToLeague = () => navigate("/game");
     const goToGame = () => navigate("/game");
 
     const renderContent = () => {
@@ -100,7 +100,7 @@ function R273C() {
                 </EmptyContent>
             </ContentContainer>
 
-            <Footer activeItem={"home"}/>
+            <Footer activeItem={"inquiry"}/>
         </Screen>
     );
 }
@@ -113,9 +113,8 @@ const Screen = styled.div`
     height: 800px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    padding: 44px 34px;
+    padding: 44px 0;
 `;
 
 const Header = styled.div`

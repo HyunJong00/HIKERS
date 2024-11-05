@@ -25,7 +25,7 @@ import Game from "./pages/Game.jsx";
 
 const router = createBrowserRouter(
   [
-    { path: "/", element: <S100S /> },
+    { path: "/", element: <H100S /> },
     { path: "/S100S", element: <S100S /> },
     { path: "/J100S", element: <J100S /> },
     { path: "/J210S", element: <J210S /> },
