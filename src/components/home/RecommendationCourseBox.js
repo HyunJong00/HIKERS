@@ -44,7 +44,7 @@ export default function RecommendationCourseBox() {
 
   const onClick = (id) => {
     if (userFavorites.includes(id)) {
-      setUserFavorites(userFavorites.filter((element) => element != id));
+      setUserFavorites(userFavorites.filter((element) => element !== id));
     } else setUserFavorites([...userFavorites, id]);
   };
 

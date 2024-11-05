@@ -4,7 +4,7 @@ import location from "../assets/home/Location.svg";
 import arrow from "../assets/home/Arrow.svg";
 
 import Header from "../components/header/Header.js";
-import Menu from "../components/menubar/MenuBar.js";
+import Footer from "../components/common/Footer.jsx";
 import AdvertiseBox from "../components/home/AdvertiseBox.js";
 import MainTab from "../components/home/MainTab.js";
 import SearchBox from "../components/home/SearchBox.js";
@@ -41,7 +41,8 @@ export default function Home() {
           </div>
         </div>
       </Body>
-      <Menu />
+
+      <Footer activeItem={"home"} />
     </>
   );
 }

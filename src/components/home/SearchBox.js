@@ -28,8 +28,8 @@ const Container = styled.div`
   border: 1.5px solid ${GlobalColor.Main.main};
   background: ${GlobalColor.white};
 
-  .filter: {
-    margin: 10px;
+  .filter {
+    margin: 12px;
   }
 `;
 
@@ -41,12 +41,12 @@ const Input = styled.input.attrs({
   margin-left: 10px;
   border: none;
 
-  color: ${GlobalColor.GrayScale[50]};
   font-feature-settings: "liga" off, "clig" off;
   font-family: Pretendard-4;
   font-size: 16px;
   line-height: 150%; /* 24px */
   letter-spacing: -0.2px;
+  outline: none;
 
   &::placeholder {
     color: ${GlobalColor.GrayScale[50]};

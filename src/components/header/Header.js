@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import logo from "../../assets/OrurakLogo.png";
-import favorite from "../../assets/home/Favorite.svg";
+import { ReactComponent as Favorite } from "../../assets/home/Favorite.svg";
 import notice from "../../assets/home/Notice.svg";
 
 import { GlobalColor } from "../../GlobalStyles";
@@ -14,7 +14,7 @@ export default function Header() {
         오르락
       </Title>
       <IconContainer>
-        <img src={favorite} alt="favorite" />
+        <Favorite fill="none" stroke="black" />
         <img src={notice} alt="notice" />
         {/* 임시 사용자 프로필 */}
         <div className="profile">현우</div>
