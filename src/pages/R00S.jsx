@@ -1,10 +1,18 @@
-import image from '../assets/images/frame/4. 기록/Group 1171275932.svg'
+import record from '../assets/images/frame/기록:리그/record.svg';
+import leage from '../assets/images/frame/기록:리그/leage.svg';
 import Footer from '../components/common/Footer.jsx';
+import React from 'react';
 
 function R00S() {
+    const [boolean, setBoolean] = React.useState(true);
+
     return (
         <div>
-            <img src={image} alt="R00S" />
+            <div onClick={()=>
+                setBoolean(!boolean)
+            }>
+            {boolean ? <img src={record} alt="record" /> : <img src={leage} alt="leage" />}
+            </div>
             <Footer activeItem={'user'} />
         </div>
     )
