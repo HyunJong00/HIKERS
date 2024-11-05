@@ -36,7 +36,10 @@ const Container = styled.div`
   border-top: 1px solid #dadada;
   background-color: #fff;
   display: flex;
+
+  position: sticky;
   width: 100%;
+  bottom: 0;
 `;
 
 const Content = styled.div`
