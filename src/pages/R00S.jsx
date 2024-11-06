@@ -1,5 +1,5 @@
-import record from '../assets/images/frame/기록:리그/record.svg';
-import leage from '../assets/images/frame/기록:리그/leage.svg';
+import record from '../assets/images/frame/league_Record/record.svg';
+import leage from '../assets/images/frame/league_Record/leage.svg';
 import Footer from '../components/common/Footer.jsx';
 import React from 'react';
 
