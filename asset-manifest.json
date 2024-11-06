@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/HIKERS/static/css/main.1e183a15.css",
-    "main.js": "/HIKERS/static/js/main.ce13bbd7.js",
+    "main.js": "/HIKERS/static/js/main.c03bae06.js",
     "static/media/leage.svg": "/HIKERS/static/media/leage.6be2692bce49dcbca6e3404f632fd72a.svg",
     "static/media/record.svg": "/HIKERS/static/media/record.42d587104f4ff3e7f9fc7302a1003200.svg",
     "static/media/image2.svg": "/HIKERS/static/media/image2.447af7ad76d5c8bb550bcccf5a9040d6.svg",
@@ -54,10 +54,10 @@
     "static/media/backbutton.svg": "/HIKERS/static/media/backbutton.9d451081420585bb790cafc1d6ae9f0d.svg",
     "static/media/Arrow.svg": "/HIKERS/static/media/Arrow.86eaef3296e15f0b534ca73a15a1a585.svg",
     "main.1e183a15.css.map": "/HIKERS/static/css/main.1e183a15.css.map",
-    "main.ce13bbd7.js.map": "/HIKERS/static/js/main.ce13bbd7.js.map"
+    "main.c03bae06.js.map": "/HIKERS/static/js/main.c03bae06.js.map"
   },
   "entrypoints": [
     "static/css/main.1e183a15.css",
-    "static/js/main.ce13bbd7.js"
+    "static/js/main.c03bae06.js"
   ]
 }
