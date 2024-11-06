@@ -109,25 +109,26 @@ export default R273C;
 
 // Styled-components
 const Screen = styled.div`
-    width: 360px;
-    height: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 44px 0;
+    width: 100%;
+    height: 100%;
+
 `;
 
 const Header = styled.div`
     display: flex;
     width: 100%;
-    height: 48px;
+    height: 100%;
     align-items: center;
+    margin-top: 20px;
 `;
 
 const BackButton = styled.button`
     background: none;
     border: none;
-    padding-left: 19.8px;
+    padding-left: 10px;
     cursor: pointer;
 
     img {
@@ -159,9 +160,9 @@ const MainContent = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 320px; 
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 100%; 
+    padding-left: 10px;
+    padding-right: 10px;
     margin-top: 26px;
 `;
 
